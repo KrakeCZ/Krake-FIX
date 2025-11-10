@@ -17,12 +17,16 @@ ideálně "Vytvoření bootovacího USB klíče s Acronis True Image 2021. Prác
 
 ⚡ Používáte na vlastní riziko. Autor nenese žádnou odpovědnost za ztrátu dat nebo poškození systému. ⚡  
 
-Upozornění: Tento nástroj provádí hloubkové změny v konfiguraci systému Windows. Je určen výhradně pro expertní uživatele na osobních (herních/testovacích) počítačích. Před po[...]  
+Upozornění: Tento nástroj provádí hloubkové změny v konfiguraci systému Windows. Je určen výhradně pro expertní uživatele na osobních (herních/testovacích) počítačích. 
+
 <p align="center">
   <img src="Screenshots/shot001.png" width="400" alt="Screenshot 5"/>
+  
 ## ⚠️ **DŮLEŽITÁ VAROVÁNÍ**  
 ms store obov - instalaci xboxapp z Mswebu , vyvolá závislost instalace MsStore!  
-Odebral jsem odinstalaci MsStore.. ale kdyby-...  
+Odebral jsem odinstalaci MsStore.. ale kdyby-Reinstaluj z webu MS xboxxapp 
+vyvolá zavislost instalace MsStore
+tweakC odstraní fotky- použij https://github.com/KrakeCZ/Krake-FIX/blob/main/RestoreOLD_Windows_Photo_Viewer_CURRENT_USER.reg
 
 ### **TENTO NÁSTROJ MĚNÍ ZÁKLADNÍ SYSTÉMOVÁ NASTAVENÍ!!!**  
 - ❌ **NE pro produkční systémy** - Pouze pro herní/testovací počítače  
