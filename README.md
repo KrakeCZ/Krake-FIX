@@ -18,10 +18,8 @@ ideálně "Vytvoření bootovacího USB klíče s Acronis True Image 2021. Prác
 
 ⚡ Používáte na vlastní riziko. Autor nenese žádnou odpovědnost za ztrátu dat nebo poškození systému. ⚡
 
-
-pokročilý, modulární nástroj pro optimalizaci, diagnostiku a správu systému Windows, navržený pro IT specialisty, power-usery a kompetitivní hráče. Poskytuje granulární kontrolu nad systémovými registry, službami, napájením, sítí a bezpečnostními funkcemi.
-
 Upozornění: Tento nástroj provádí hloubkové změny v konfiguraci systému Windows. Je určen výhradně pro expertní uživatele na osobních (herních/testovacích) počítačích. Před použitím důrazně doporučujeme vytvořit bod obnovení systému. Autor nenese žádnou odpovědnost za případné škody.
+
 ## ⚠️ **DŮLEŽITÁ VAROVÁNÍ**
 ms store obov - instalaci xboxapp z Mswebu , vyvolá závislost instalace MsStore!
 Odebral jsem odinstalaci MsStore.. ale kdyby-...
@@ -75,24 +73,18 @@ Pokud chcete mít možnost spouštět vlastní lokální skripty (ale stále blo
 		 
 Prostředí: Důrazně doporučeno na čisté instalaci Windows po aktualním Update ,použivám po aplikaci nástroje Winutil k blokaci telemetrie/služeb manualně atd..
 
-
-
-
-
-==================================================================
+===============================================================================
 ⚡ Jak Použít (Rychlý Start)
 Vytvořte Bod Obnovy: Než začnete, vytvořte bod obnovení systému!
-Spusťte Terminal / powershell  jako Administrátor.
- 
+Spusťte Terminal / powershell  jako Administrátor. 
  Invoke-Expression "rstrui.exe"  
  po zaloze  umistění kde je Main.ps1 a složka modules , kopiruju na C:\
- 
 cd C:\
 udělit opravnění *
 C:\.\Main.ps1
 Proveďte Pre-Tweak Kontrolu: V hlavním menu vyberte [0] PRE-TWEAK Kontrola závislostí . Tím zajistíte, že eskalace oprávnění bude fungovat správně.
 Aplikujte Debloat: Vyberte [1] Aplikovat obecné tweaky a zvolte úroveň (doporučeno Tweak A/B ] pro většinu hráčů, Tweak C  pro experty).
-=====================================================================
+=========================================================================================
 Aplikujte Herní Tweaky:
 
 [2] GPU Tweaky -> Vyberte svého výrobce (NVIDIA, AMD, Intel) a aplikujte profily Latence nebo Výkonu.
@@ -102,7 +94,6 @@ Aplikujte Herní Tweaky:
 (Volitelné) Aplikujte Hazard Tweaky: Pokud jste si vědomi rizik, vstupte do [7] Security Hazard Tweaks (heslo: extreme ) a vypněte CPU Mitigace, HVCI a VBS.
 
 Restartujte Počítač: Většina hloubkových změn vyžaduje restart.
-
 
 ============================================================================================================================
 
