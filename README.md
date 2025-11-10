@@ -30,10 +30,12 @@ Pokud Použiješ HOSTS - Tvuj antivirus muze FALESNE ohlasit tuto akci jako nebe
 Duvod: ## Blokování Microsoft domén
 <details>
 <summary>Klikněte pro zobrazení seznamu 40+ Microsoft domén blokovaných v HOSTS file</summary>
-```
- Blokovani 40+ Microsoft domen v HOSTS file
+
+[ Blokovani 40+ Microsoft domen v HOSTS file
 Tyto domény jsou nastaveny na 0.0.0.0 a nebudou moci komunikovat:
 Historicky populární metodou blokování telemetrie byla úprava souboru hosts (C:\Windows\System32\drivers\etc\hosts) za účelem přesměrování telemetrických serverů Microsoftu na lokální adresu 127.0.0.1. Tato metoda je však v moderních verzích Windows již z velké části neúčinná a problematická. Systém je schopen soubor hosts obejít a, co je důležitější, Microsoft Defender nyní aktivně detekuje takovéto úpravy jako bezpečnostní hrozbu SettingsModifier:Win32/HostsFileHijack. To nutí uživatele buď povolit "hrozbu" (čímž se oslabí legitimní bezpečnostní funkce) nebo se smířit s tím, že jeho změny budou vráceny zpět. Z těchto důvodů se dnes doporučuje upřednostnit spolehlivější a systémem tolerované metody deaktivace telemetrie prostřednictvím registru, služeb a naplánovaných úloh. Pro uživatele, kteří potřebují obnovit původní stav souboru hosts, je níže uveden jeho výchozí obsah.
+
+
 Výchozí obsah souboru hosts:
  Copyright (c) 1993-2006 Microsoft Corp.
 
@@ -54,9 +56,9 @@ Výchozí obsah souboru hosts:
  localhost name resolution is handle within DNS itself.
        127.0.0.1       localhost
        ::1             localhost
+]
 
-
-
+```
 a-msedge.net
 activity.windows.com
 ad.doubleclick.net
