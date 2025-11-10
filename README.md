@@ -174,19 +174,22 @@ Pokud chcete mít možnost spouštět vlastní lokální skripty (ale stále blo
          Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine -Force  
 ```  
 Prostředí: Důrazně doporučeno na čisté instalaci Windows po aktualním Update ,  
+
 <details>
 <summary>použivám Krake-FiX  po aplikaci nástroje
  Winutil & shutup O O -> k blokaci telemetrie/služeb manualně atd..  
  </summary>
-```
+
 <p align="center">
-  <img src="Screenshots/winutil.jpg" width="80" alt="Screenshot 1"/>  
+  <img src="Screenshots/shot-winut.png" width="200" alt="Screenshot"/>  
 </p>
 
-```
+
 </details>
-===============================================================================  
-⚡ Jak Použít (Rychlý Start)  
+
+ 
+⚡ Jak Použít (Rychlý Start)
+ 
 ```
 Vytvořte Bod Obnovy: Než začnete, vytvořte bod obnovení systému!  
 Spusťte Terminal / powershell  jako Administrátor.  
