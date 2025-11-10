@@ -63,6 +63,7 @@ Tento nástroj je určený pro:
 OS: Windows 10 (1903+) nebo Windows 11 (25H2+).
 PowerShell: 5.1 nebo novější.
 *Oprávnění: Plná administrátorská oprávnění.   
+```
 1        Set-ExecutionPolicy -ExecutionPolicy Undefined -Scope CurrentUser -Force
 2        Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope LocalMachine -Force
  Zruší pravidlo pro uživatele (1) a poté povolí spuštění všech skriptů pro celý počítač (2).
@@ -70,11 +71,13 @@ PowerShell: 5.1 nebo novější.
          Set-ExecutionPolicy -ExecutionPolicy Restricted -Scope LocalMachine -Force
 Pokud chcete mít možnost spouštět vlastní lokální skripty (ale stále blokovat ty stažené z internetu) :
          Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine -Force
-		 
-Prostředí: Důrazně doporučeno na čisté instalaci Windows po aktualním Update ,použivám po aplikaci nástroje Winutil k blokaci telemetrie/služeb manualně atd..
+```		 
+Prostředí: Důrazně doporučeno na čisté instalaci Windows po aktualním Update ,
+použivám svůj nastroj  po aplikaci nástroje Winutil k blokaci telemetrie/služeb manualně atd..
 
 ===============================================================================
 ⚡ Jak Použít (Rychlý Start)
+```
 Vytvořte Bod Obnovy: Než začnete, vytvořte bod obnovení systému!
 Spusťte Terminal / powershell  jako Administrátor. 
  Invoke-Expression "rstrui.exe"  
@@ -84,9 +87,11 @@ udělit opravnění *
 C:\.\Main.ps1
 Proveďte Pre-Tweak Kontrolu: V hlavním menu vyberte [0] PRE-TWEAK Kontrola závislostí . Tím zajistíte, že eskalace oprávnění bude fungovat správně.
 Aplikujte Debloat: Vyberte [1] Aplikovat obecné tweaky a zvolte úroveň (doporučeno Tweak A/B ] pro většinu hráčů, Tweak C  pro experty).
+```
+
 =========================================================================================
 Aplikujte Herní Tweaky:
-
+```
 [2] GPU Tweaky -> Vyberte svého výrobce (NVIDIA, AMD, Intel) a aplikujte profily Latence nebo Výkonu.
 [12] Síťové optimalizace -> TCP/IP -> [4] Optimalizace Nagle (vypněte Nagle pro váš herní adaptér).
 [17] GAME + AUDIO Priority (MMCSS) -> [1] Upravit GAMES Profil a nastavte vysokou prioritu .
@@ -94,7 +99,7 @@ Aplikujte Herní Tweaky:
 (Volitelné) Aplikujte Hazard Tweaky: Pokud jste si vědomi rizik, vstupte do [7] Security Hazard Tweaks (heslo: extreme ) a vypněte CPU Mitigace, HVCI a VBS.
 
 Restartujte Počítač: Většina hloubkových změn vyžaduje restart.
-
+```
 ============================================================================================================================
 
 🎯 Filozofie: Nulový Overhead (Žádné "Watchdogy")
@@ -109,6 +114,7 @@ Jedná se o statickou konfiguraci, nikoli o proces běžící na pozadí, který
 ============================================================================================================================
 
 🔄 Proces Obnovy (Jak vrátit změny)
+```
 Pokud narazíte na problémy nebo chcete systém vrátit do výchozího stavu:
 Použijte Bod Obnovy Systému (System Restore Point): Toto je nejjednodušší a nejbezpečnější metoda.
 Obnovte Bezpečnostní Tweaky:
@@ -122,7 +128,7 @@ Pokud WU nefunguje, použijte Main.ps1 -> [13] Windows Update Management -> [6] 
 Odblokujte Edge:
 Pokud jste použili Hardcore blokaci, musíte nejprve spustit Main.ps1 -> [16] Edge Blockade -> [R] ACL UNLOCK (tím se odstraní DENY pravidla) .
 Poté spusťte [U] UNLOCK/REVERT pro odstranění IFEO a Firewallu .
-
+```
 
 ==========================================================================================================
 
