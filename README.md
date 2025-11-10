@@ -79,84 +79,91 @@ Prostředí: Důrazně doporučeno na čisté instalaci Windows po aktualním Up
 
 
 
-
+==================================================================
 ⚡ Jak Použít (Rychlý Start)
 Vytvořte Bod Obnovy: Než začnete, vytvořte bod obnovení systému!
-
 Spusťte Terminal / powershell  jako Administrátor.
  
  Invoke-Expression "rstrui.exe"  
  po zaloze  umistění kde je Main.ps1 a složka modules , kopiruju na C:\
+ 
 cd C:\
-
 udělit opravnění *
-
 C:\.\Main.ps1
-
-
 Proveďte Pre-Tweak Kontrolu: V hlavním menu vyberte [0] PRE-TWEAK Kontrola závislostí . Tím zajistíte, že eskalace oprávnění bude fungovat správně.
-
 Aplikujte Debloat: Vyberte [1] Aplikovat obecné tweaky a zvolte úroveň (doporučeno Tweak A/B ] pro většinu hráčů, Tweak C  pro experty).
-
+=====================================================================
 Aplikujte Herní Tweaky:
 
 [2] GPU Tweaky -> Vyberte svého výrobce (NVIDIA, AMD, Intel) a aplikujte profily Latence nebo Výkonu.
-
 [12] Síťové optimalizace -> TCP/IP -> [4] Optimalizace Nagle (vypněte Nagle pro váš herní adaptér).
-
 [17] GAME + AUDIO Priority (MMCSS) -> [1] Upravit GAMES Profil a nastavte vysokou prioritu .
-
 [3] Win32PrioritySeparation -> Zvolte profil [1] (Ultra Esports) nebo [3] (Ultra Gaming) .
-
 (Volitelné) Aplikujte Hazard Tweaky: Pokud jste si vědomi rizik, vstupte do [7] Security Hazard Tweaks (heslo: extreme ) a vypněte CPU Mitigace, HVCI a VBS.
 
 Restartujte Počítač: Většina hloubkových změn vyžaduje restart.
 
 
-===============================================================================================================================================================================================
+============================================================================================================================
+
 🎯 Filozofie: Nulový Overhead (Žádné "Watchdogy")
-Tento nástroj je navržen pro kompetitivní hráče. Na rozdíl od jiných optimalizačních nástrojů, KRAKE-FIX neinstaluje žádné služby na pozadí, "watchdogy" nebo agenty, které běží 24/7.
-
+Tento nástroj je navržen pro kompetitivní hráče. Na rozdíl od jiných optimalizačních nástrojů, 
+KRAKE-FIX neinstaluje žádné služby na pozadí, "watchdogy" nebo agenty, které běží 24/7.!!!
 Filozofie je jednoduchá:
-
 Aplikuj (Apply): Provedete jednorázovou, hloubkovou konfiguraci systému (registry, ACL, služby).
-
 Restartuj (Reboot): Systém se spustí v optimalizovaném stavu.
-
 Hraj (Play): Užijte si 0% CPU overhead, 0 MB využité RAM a nulový I/O dopad od samotného nástroje během hraní.
+Jedná se o statickou konfiguraci, nikoli o proces běžící na pozadí, který by mohl způsobit micro-stuttering nebo krást systémové prostředky během hry . 
 
-Jedná se o statickou konfiguraci, nikoli o proces běžící na pozadí, který by mohl způsobit micro-stuttering nebo krást systémové prostředky během hry .
-===============================================================================================================================================================================================
-
-
+============================================================================================================================
 
 🔄 Proces Obnovy (Jak vrátit změny)
 Pokud narazíte na problémy nebo chcete systém vrátit do výchozího stavu:
-
 Použijte Bod Obnovy Systému (System Restore Point): Toto je nejjednodušší a nejbezpečnější metoda.
-
 Obnovte Bezpečnostní Tweaky:
-
 Spusťte Main.ps1 -> [6] Obnovit bezpečné výchozí nastavení Windows (RevertHazard.psm1) .
-
 Tím se obnoví všechny tweaky z modulu Security (VBS, HVCI, Defender atd.) na jejich výchozí (zapnutý) stav.
-
 Obnovte Služby:
-
 Spusťte Main.ps1 -> [1] Aplikovat obecné tweaky -> [R] TWEAK R - Reset služeb (TweakR.psm1) .
-
 Tím se obnoví a spustí 277+ systémových služeb do výchozího stavu.
-
 Opravte Windows Update:
-
 Pokud WU nefunguje, použijte Main.ps1 -> [13] Windows Update Management -> [6] Repair & Reset (Updates.psm1) .
-
 Odblokujte Edge:
-
 Pokud jste použili Hardcore blokaci, musíte nejprve spustit Main.ps1 -> [16] Edge Blockade -> [R] ACL UNLOCK (tím se odstraní DENY pravidla) .
-
 Poté spusťte [U] UNLOCK/REVERT pro odstranění IFEO a Firewallu .
 
+
+==========================================================================================================
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+```
+MIT License
+
+Copyright (c) 2025 KRAKE-FIX Contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+---
 
 
 
