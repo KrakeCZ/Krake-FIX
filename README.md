@@ -26,7 +26,73 @@ Upozornění: Tento nástroj provádí hloubkové změny v konfiguraci systému 
 ms store obov - instalaci xboxapp z Mswebu , vyvolá závislost instalace MsStore!  
 Odebral jsem odinstalaci MsStore.. ale kdyby-Reinstaluj z webu MS xboxxapp 
 vyvolá zavislost instalace MsStore
-tweakC odstraní fotky- použij https://github.com/KrakeCZ/Krake-FIX/blob/main/RestoreOLD_Windows_Photo_Viewer_CURRENT_USER.reg
+Pokud Použiješ HOSTS - Tvuj antivirus muze FALESNE ohlasit tuto akci jako nebezpecnou!
+Duvod: ## Blokování Microsoft domén
+
+<details>
+<summary>Klikněte pro zobrazení seznamu 40+ Microsoft domén blokovaných v HOSTS file</summary>
+
+### Blokovani 40+ Microsoft domen v HOSTS file
+Tyto domény jsou nastaveny na `0.0.0.0` a nebudou moci komunikovat:
+
+```
+a-msedge.net
+activity.windows.com
+ad.doubleclick.net
+bingads.microsoft.com
+c.msn.com
+cdn.optimizely.com
+choice.microsoft.com
+compatexchange.cloudapp.net
+corp.sts.microsoft.com
+diagnostics.support.microsoft.com
+feedback.microsoft-hohm.com
+feedback.search.microsoft.com
+feedback.windows.com
+flex.msn.com
+g.msn.com
+oca.telemetry.microsoft.com
+pre.footprintpredict.com
+rad.msn.com
+redir.metaservices.microsoft.com
+schemas.microsoft.akadns.net
+settings-win.data.microsoft.com
+sls.update.microsoft.com.akadns.net
+sqm.df.telemetry.microsoft.com
+sqm.telemetry.microsoft.com
+statsfe1.ws.microsoft.com
+statsfe2.update.microsoft.com.akadns.net
+statsfe2.ws.microsoft.com
+survey.watson.microsoft.com
+telecommand.telemetry.microsoft.com
+telemetry.appex.bing.net
+telemetry.microsoft.com
+telemetry.urs.microsoft.com
+vortex-bn2.metron.live.com.nsatc.net
+vortex-cy2.metron.live.com.nsatc.net
+vortex.data.microsoft.com
+vortex-win.data.microsoft.com
+watson.microsoft.com
+watson.ppe.telemetry.microsoft.com
+watson.telemetry.microsoft.com
+wes.df.telemetry.microsoft.com
+134.170.30.202
+137.116.81.24
+157.56.106.189
+184.86.53.99
+204.79.197.200
+23.218.212.69
+65.39.117.230
+65.55.108.23
+64.4.54.254
+```
+
+</details>
+TweakC odstraní fotky app-> [Obnovit starý prohlížeč fotografií Windows](https://github.com/KrakeCZ/Krake-FIX/blob/main/RestoreOLD_Windows_Photo_Viewer_CURRENT_USER.reg)
+pokud se rozbije CMD/terminal/pwrshel viz <p align="center">
+  <img src="Screenshots/shot-x1.png" width="80" alt="Screenshot 1"/>
+  <img src="Screenshots/shot-x2.png" width="80" alt="Screenshot 2"/>
+</p>
 
 ### **TENTO NÁSTROJ MĚNÍ ZÁKLADNÍ SYSTÉMOVÁ NASTAVENÍ!!!**  
 - ❌ **NE pro produkční systémy** - Pouze pro herní/testovací počítače  
