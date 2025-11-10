@@ -28,12 +28,34 @@ Odebral jsem odinstalaci MsStore.. ale kdyby-Reinstaluj z webu MS xboxxapp
 vyvolá zavislost instalace MsStore
 Pokud Použiješ HOSTS - Tvuj antivirus muze FALESNE ohlasit tuto akci jako nebezpecnou!
 Duvod: ## Blokování Microsoft domén
-
 <details>
 <summary>Klikněte pro zobrazení seznamu 40+ Microsoft domén blokovaných v HOSTS file</summary>
 
 ### Blokovani 40+ Microsoft domen v HOSTS file
 Tyto domény jsou nastaveny na `0.0.0.0` a nebudou moci komunikovat:
+Historicky populární metodou blokování telemetrie byla úprava souboru hosts (C:\Windows\System32\drivers\etc\hosts) za účelem přesměrování telemetrických serverů Microsoftu na lokální adresu 127.0.0.1. Tato metoda je však v moderních verzích Windows již z velké části neúčinná a problematická. Systém je schopen soubor hosts obejít a, co je důležitější, Microsoft Defender nyní aktivně detekuje takovéto úpravy jako bezpečnostní hrozbu SettingsModifier:Win32/HostsFileHijack. To nutí uživatele buď povolit "hrozbu" (čímž se oslabí legitimní bezpečnostní funkce) nebo se smířit s tím, že jeho změny budou vráceny zpět. Z těchto důvodů se dnes doporučuje upřednostnit spolehlivější a systémem tolerované metody deaktivace telemetrie prostřednictvím registru, služeb a naplánovaných úloh. Pro uživatele, kteří potřebují obnovit původní stav souboru hosts, je níže uveden jeho výchozí obsah.
+Výchozí obsah souboru hosts:
+# Copyright (c) 1993-2006 Microsoft Corp.
+#
+# This is a sample HOSTS file used by Microsoft TCP/IP for Windows.
+#
+# This file contains the mappings of IP addresses to host names. Each
+# entry should be kept on an individual line. The IP address should
+# be placed in the first column followed by the corresponding host name.
+# The IP address and the host name should be separated by at least one
+# space.
+#
+# Additionally, comments (such as these) may be inserted on individual
+# lines or following the machine name denoted by a '#' symbol.
+#
+# For example:
+#
+#      102.54.94.97     rhino.acme.com          # source server
+#       38.25.63.10     x.acme.com              # x client host
+
+# localhost name resolution is handle within DNS itself.
+#       127.0.0.1       localhost
+#       ::1             localhost
 
 ```
 a-msedge.net
@@ -86,7 +108,6 @@ wes.df.telemetry.microsoft.com
 65.55.108.23
 64.4.54.254
 ```
-
 </details>
 TweakC odstraní fotky app-> [(https://github.com/KrakeCZ/Krake-FIX/blob/main/RestoreOLD_Windows_Photo_Viewer_CURRENT_USER.reg)]
 
@@ -97,7 +118,6 @@ pokud se rozbije
   <img src="Screenshots/shot-x2.png" width="80" alt="Screenshot 2"/>
 </p> </summary>
 
-
 ```
 Změňte condrvtyp spouštění služby (pokročilí uživatelé)
 Chyba je často spojena s tím, že condrvse služba nespustí automaticky, když je potřeba. 
@@ -107,6 +127,7 @@ V pravém podokně vyhledejte Startpoložku.
 Dvakrát klikněte Starta změňte jeho hodnotu z 3(manuální) na 2(automatické) .
 Restartujte počítač, aby se změna projevila.
 ```
+</details>
 
 ### **TENTO NÁSTROJ MĚNÍ ZÁKLADNÍ SYSTÉMOVÁ NASTAVENÍ!!!**  
 - ❌ **NE pro produkční systémy** - Pouze pro herní/testovací počítače  
@@ -127,7 +148,8 @@ Tento nástroj je určený pro:
 - ❌ Pracovní počítače  
 - ❌ Systémy s citlivými daty  
 - ❌ Sdílené/veřejné počítače  
-- ❌ Systémy vyžadující maximální zabezpečení  
+- ❌ Systémy vyžadující maximální zabezpečení
+- 
 ## 🎯 Funkce  
 ### **Základní schopnosti**  
 - 🎮 **Herní optimalizace** - Snížení input lagu, zvýšení FPS, optimalizace CPU/GPU  
@@ -136,8 +158,8 @@ Tento nástroj je určený pro:
 - 🔒 **Kontrola soukromí** - Vypnutí trackingu, telemetrie, kontrola Windows Update  
 - ⚡ **Zvýšení výkonu** - CPU mitigace OFF, MMCSS ladění, optimalizace paměti  
 - 🛡️ **Bezpečnostní možnosti** - Kontrola VBS/HVCI, správa Defenderu, LSA,TSX Protection  
--POZOR hPET- neni vhodny pro moderní CPU!!! pokud bude win slowmo dej zpět :D nastavil si to v sekci 7!  
----  
+-POZOR hPET- neni vhodny pro moderní CPU!!! pokud bude win slowmo dej zpět -nastavil si to v sekci 7!  
+
 ## 💻 Systémové požadavky OS: Windows 10 (1903+) nebo Windows 11 (25H2+). PowerShell: 5.1 nebo novější.  
 *Oprávnění: Plná administrátorská oprávnění.   
 ```
@@ -234,7 +256,7 @@ SOFTWARE.
 
 ---
 
-## 📸 Screenshots
+## 📸 Screenshots první dva možná chyba a oprava 
 
 <p align="center">
   <img src="Screenshots/shot-x1.png" width="400" alt="Screenshot 1"/>
