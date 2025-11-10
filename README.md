@@ -90,10 +90,23 @@ wes.df.telemetry.microsoft.com
 </details>
 TweakC odstraní fotky app-> [(https://github.com/KrakeCZ/Krake-FIX/blob/main/RestoreOLD_Windows_Photo_Viewer_CURRENT_USER.reg)]
 
-pokud se rozbije CMD/terminal/pwrshel viz <p align="center">
+pokud se rozbije 
+<details>
+<summary>CMD/terminal/pwrshel viz <p align="center">
   <img src="Screenshots/shot-x1.png" width="80" alt="Screenshot 1"/>
   <img src="Screenshots/shot-x2.png" width="80" alt="Screenshot 2"/>
-</p>
+</p> </summary>
+
+
+```
+Změňte condrvtyp spouštění služby (pokročilí uživatelé)
+Chyba je často spojena s tím, že condrvse služba nespustí automaticky, když je potřeba. 
+Otevřete Editor registru zadáním regeditvyhledávacího dotazu do nabídky Start a spuštěním jako správce.
+Přejděte k následující klávese: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\condrv.
+V pravém podokně vyhledejte Startpoložku.
+Dvakrát klikněte Starta změňte jeho hodnotu z 3(manuální) na 2(automatické) .
+Restartujte počítač, aby se změna projevila.
+```
 
 ### **TENTO NÁSTROJ MĚNÍ ZÁKLADNÍ SYSTÉMOVÁ NASTAVENÍ!!!**  
 - ❌ **NE pro produkční systémy** - Pouze pro herní/testovací počítače  
