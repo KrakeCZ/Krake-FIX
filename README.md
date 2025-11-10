@@ -31,7 +31,7 @@ Duvod: ## Blokování Microsoft domén
 <details>
 <summary>Klikněte pro zobrazení seznamu 40+ Microsoft domén blokovaných v HOSTS file</summary>
 
-[ Blokovani 40+ Microsoft domen v HOSTS file
+ Blokovani 40+ Microsoft domen v HOSTS file
 Tyto domény jsou nastaveny na 0.0.0.0 a nebudou moci komunikovat:
 Historicky populární metodou blokování telemetrie byla úprava souboru hosts (C:\Windows\System32\drivers\etc\hosts) za účelem přesměrování telemetrických serverů Microsoftu na lokální adresu 127.0.0.1. Tato metoda je však v moderních verzích Windows již z velké části neúčinná a problematická. Systém je schopen soubor hosts obejít a, co je důležitější, Microsoft Defender nyní aktivně detekuje takovéto úpravy jako bezpečnostní hrozbu SettingsModifier:Win32/HostsFileHijack. To nutí uživatele buď povolit "hrozbu" (čímž se oslabí legitimní bezpečnostní funkce) nebo se smířit s tím, že jeho změny budou vráceny zpět. Z těchto důvodů se dnes doporučuje upřednostnit spolehlivější a systémem tolerované metody deaktivace telemetrie prostřednictvím registru, služeb a naplánovaných úloh. Pro uživatele, kteří potřebují obnovit původní stav souboru hosts, je níže uveden jeho výchozí obsah.
 
@@ -130,7 +130,7 @@ Restartujte počítač, aby se změna projevila.
 ```
 </details>
 
-### **TENTO NÁSTROJ MĚNÍ ZÁKLADNÍ SYSTÉMOVÁ NASTAVENÍ!!!**  
+- **TENTO NÁSTROJ MĚNÍ ZÁKLADNÍ SYSTÉMOVÁ NASTAVENÍ!!!**  
 - ❌ **NE pro produkční systémy** - Pouze pro herní/testovací počítače  
 - ⚠️ **Bezpečnostní funkce vypnuty** - Některé moduly vypínají Windows Defender, VBS, HVCI  
 - 🔧 **Změny systému** - Registry, služby, bcdedit operace, ACL změny  
@@ -138,21 +138,22 @@ Restartujte počítač, aby se změna projevila.
 - 🔄 **Restart nutný** - Většina úprav vyžaduje restart PC  
 - 🛡️ **Antivirus vypnutý** - Některé konfigurace vypínají ochranu v reálném čase viz security sekce!   
 
-### **⚡ POUŽÍVEJ NA VLASTNÍ RIZIKO ⚡**  
-Tento nástroj je určený pro:  
+- **⚡ POUŽÍVEJ NA VLASTNÍ RIZIKO ⚡**  
+-Tento nástroj je určený pro:  
 - ✅ Herní PC (e-sports, competitive, casual)  
 - ✅ Testovací prostředí  
 - ✅ Dual-boot systémy s testovacím OS  
 - ✅ Pokročilé uživatele, kteří rozumí rizikům  
 
-**NENÍ doporučený pro:**  
+-**NENÍ doporučený pro:**  
 - ❌ Pracovní počítače  
 - ❌ Systémy s citlivými daty  
 - ❌ Sdílené/veřejné počítače  
 - ❌ Systémy vyžadující maximální zabezpečení
 - 
-## 🎯 Funkce  
-### **Základní schopnosti**  
+
+ -🎯 Funkce  
+- **Základní schopnosti**  
 - 🎮 **Herní optimalizace** - Snížení input lagu, zvýšení FPS, optimalizace CPU/GPU  
 - 🗑️ **Windows debloating** - Odstranění bloatwaru, vypnutí telemetrie, čištění AppX balíčků  
 - 🌐 **Síťové úpravy** - TCP/IP optimalizace, konfigurace DNS, ladění Nagle algoritmu  
@@ -161,7 +162,7 @@ Tento nástroj je určený pro:
 - 🛡️ **Bezpečnostní možnosti** - Kontrola VBS/HVCI, správa Defenderu, LSA,TSX Protection  
 -POZOR hPET- neni vhodny pro moderní CPU!!! pokud bude win slowmo dej zpět -nastavil si to v sekci 7!  
 
-## 💻 Systémové požadavky OS: Windows 10 (1903+) nebo Windows 11 (25H2+). PowerShell: 5.1 nebo novější.  
+ 💻 Systémové požadavky OS: Windows 10 (1903+) nebo Windows 11 (25H2+). PowerShell: 5.1 nebo novější.  
 *Oprávnění: Plná administrátorská oprávnění.   
 ```
 1        Set-ExecutionPolicy -ExecutionPolicy Undefined -Scope CurrentUser -Force  
