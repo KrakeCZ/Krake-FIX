@@ -88,7 +88,8 @@ wes.df.telemetry.microsoft.com
 ```
 
 </details>
-TweakC odstraní fotky app-> [Obnovit starý prohlížeč fotografií Windows](https://github.com/KrakeCZ/Krake-FIX/blob/main/RestoreOLD_Windows_Photo_Viewer_CURRENT_USER.reg)
+TweakC odstraní fotky app-> [Obnovit starý prohlížeč fotografií Windows] (https://github.com/KrakeCZ/Krake-FIX/blob/main/RestoreOLD_Windows_Photo_Viewer_CURRENT_USER.reg)
+
 pokud se rozbije CMD/terminal/pwrshel viz <p align="center">
   <img src="Screenshots/shot-x1.png" width="80" alt="Screenshot 1"/>
   <img src="Screenshots/shot-x2.png" width="80" alt="Screenshot 2"/>
