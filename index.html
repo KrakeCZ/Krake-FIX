@@ -239,24 +239,6 @@
             text-decoration: underline;
         }
         .module-card p { color: var(--text-muted); font-size: 1rem; }
-        .code-display {
-            margin-top: 1rem;
-        }
-        .code-display pre {
-            background: #0d0d12;
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 8px;
-            padding: 1rem;
-            overflow-x: auto;
-            color: var(--primary);
-            font-family: 'Consolas', 'Monaco', monospace;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-        .code-display h4 {
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -683,96 +665,84 @@
                 <h3>Gaming & MMCSS</h3>
                 <div class="filename"><a href="https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/Gaming.psm1" target="_blank">Gaming.psm1</a> • <a href="https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/MMCSS.psm1" target="_blank">MMCSS.psm1</a></div>
                 <p>Optimalizace pro herní výkon, MMCSS ladění, priorita procesů, snížení input lagu.</p>
-                <button class="btn btn-secondary show-code-btn">Show Code</button>
-                <div class="code-display" style="display:none;"></div>
+                <a href="https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/Gaming.psm1" class="btn btn-secondary" target="_blank">📂 View on GitHub</a>
             </div>
             <div class="module-card">
                 <div class="module-icon">🎨</div>
                 <h3>GPU Tweaky</h3>
                 <div class="filename"><a href="https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/GPU_NVIDIA.psm1" target="_blank">GPU_NVIDIA.psm1</a> • <a href="https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/GPU_AMD.psm1" target="_blank">GPU_AMD.psm1</a> • <a href="https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/GPU_Intel.psm1" target="_blank">GPU_Intel.psm1</a></div>
                 <p>Specifické optimalizace pro NVIDIA, AMD a Intel grafické karty.  Latence a výkon.</p>
-                <button class="btn btn-secondary show-code-btn">Show Code</button>
-                <div class="code-display" style="display:none;"></div>
+                <a href="https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/GPU_NVIDIA.psm1" class="btn btn-secondary" target="_blank">📂 View on GitHub</a>
             </div>
             <div class="module-card">
                 <div class="module-icon">🌐</div>
                 <h3>Síťové optimalizace</h3>
                 <div class="filename"><a href="https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/Network.psm1" target="_blank">Network.psm1</a></div>
                 <p>TCP/IP tweaky, konfigurace DNS, Nagle algoritmus, optimalizace pro nízkou latenci.</p>
-                <button class="btn btn-secondary show-code-btn">Show Code</button>
-                <div class="code-display" style="display:none;"></div>
+                <a href="https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/Network.psm1" class="btn btn-secondary" target="_blank">📂 View on GitHub</a>
             </div>
             <div class="module-card">
                 <div class="module-icon">🛡️</div>
                 <h3>Security & Hazard</h3>
                 <div class="filename"><a href="https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/Security.psm1" target="_blank">Security.psm1</a> • <a href="https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/RevertHazard.psm1" target="_blank">RevertHazard.psm1</a></div>
                 <p>Vypnutí CPU mitigací, VBS, HVCI, LSA Protection.  Chráněno heslem. </p>
-                <button class="btn btn-secondary show-code-btn">Show Code</button>
-                <div class="code-display" style="display:none;"></div>
+                <a href="https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/Security.psm1" class="btn btn-secondary" target="_blank">📂 View on GitHub</a>
             </div>
             <div class="module-card">
                 <div class="module-icon">🗑️</div>
                 <h3>Debloat & Tweaky</h3>
                 <div class="filename"><a href="https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/TweakA.psm1" target="_blank">TweakA.psm1</a> • <a href="https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/TweakB.psm1" target="_blank">TweakB.psm1</a> • <a href="https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/TweakC.psm1" target="_blank">TweakC.psm1</a> • <a href="https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/Tweak0.psm1" target="_blank">Tweak0.psm1</a></div>
                 <p>Agresivní debloat, odstranění bloatwaru, AppX balíčků a nepotřebných funkcí.</p>
-                <button class="btn btn-secondary show-code-btn">Show Code</button>
-                <div class="code-display" style="display:none;"></div>
+                <a href="https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/TweakA.psm1" class="btn btn-secondary" target="_blank">📂 View on GitHub</a>
             </div>
             <div class="module-card">
                 <div class="module-icon">⛔</div>
                 <h3>Edge Block</h3>
                 <div class="filename"><a href="https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/MEBlock.psm1" target="_blank">MEBlock.psm1</a></div>
                 <p>Blokace Microsoft Edge pomocí ACL zámků. Zamezení automatické reinstalaci.</p>
-                <button class="btn btn-secondary show-code-btn">Show Code</button>
-                <div class="code-display" style="display:none;"></div>
+                <a href="https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/MEBlock.psm1" class="btn btn-secondary" target="_blank">📂 View on GitHub</a>
             </div>
             <div class="module-card">
                 <div class="module-icon">📊</div>
                 <h3>Telemetrie</h3>
                 <div class="filename"><a href="https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/Telemetry.psm1" target="_blank">Telemetry.psm1</a></div>
                 <p>Vypnutí Windows telemetrie, trackingu a diagnostických služeb. </p>
-                <button class="btn btn-secondary show-code-btn">Show Code</button>
-                <div class="code-display" style="display:none;"></div>
+                <a href="https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/Telemetry.psm1" class="btn btn-secondary" target="_blank">📂 View on GitHub</a>
             </div>
             <div class="module-card">
                 <div class="module-icon">⚡</div>
                 <h3>Power Plan</h3>
                 <div class="filename"><a href="https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/PowerPlan.psm1" target="_blank">PowerPlan.psm1</a> • <a href="https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/CoreParking.psm1" target="_blank">CoreParking.psm1</a></div>
                 <p>Napájení pro maximální výkon, Core Parking nastavení. </p>
-                <button class="btn btn-secondary show-code-btn">Show Code</button>
-                <div class="code-display" style="display:none;"></div>
+                <a href="https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/PowerPlan.psm1" class="btn btn-secondary" target="_blank">📂 View on GitHub</a>
             </div>
             <div class="module-card">
                 <div class="module-icon">🔄</div>
                 <h3>Windows Update</h3>
                 <div class="filename"><a href="https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/Updates.psm1" target="_blank">Updates.psm1</a></div>
                 <p>Kontrola a správa Windows Update, možnost pozastavení aktualizací.</p>
-                <button class="btn btn-secondary show-code-btn">Show Code</button>
-                <div class="code-display" style="display:none;"></div>
+                <a href="https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/Updates.psm1" class="btn btn-secondary" target="_blank">📂 View on GitHub</a>
             </div>
             <div class="module-card">
                 <div class="module-icon">🔧</div>
                 <h3>Systém & Diagnostika</h3>
                 <div class="filename"><a href="https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/System.psm1" target="_blank">System.psm1</a> • <a href="https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/Diagnostics.psm1" target="_blank">Diagnostics.psm1</a></div>
                 <p>Systémové utility, diagnostické nástroje a analýza konfigurace.</p>
-                <button class="btn btn-secondary show-code-btn">Show Code</button>
-                <div class="code-display" style="display:none;"></div>
+                <a href="https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/System.psm1" class="btn btn-secondary" target="_blank">📂 View on GitHub</a>
             </div>
             <div class="module-card">
                 <div class="module-icon">💾</div>
                 <h3>Záloha & Obnova</h3>
                 <div class="filename"><a href="https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/Restore.psm1" target="_blank">Restore.psm1</a></div>
                 <p>Nástroje pro zálohu nastavení a obnovu do výchozího stavu.</p>
-                <button class="btn btn-secondary show-code-btn">Show Code</button>
-                <div class="code-display" style="display:none;"></div>
+                <a href="https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/Restore.psm1" class="btn btn-secondary" target="_blank">📂 View on GitHub</a>
             </div>
             <div class="module-card">
                 <div class="module-icon">🛠️</div>
                 <h3>Utility & Core</h3>
                 <div class="filename"><a href="https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/Core.psm1" target="_blank">Core.psm1</a> • <a href="https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/Utils.psm1" target="_blank">Utils.psm1</a> • <a href="https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/Data.psm1" target="_blank">Data.psm1</a></div>
                 <p>Jádro aplikace, pomocné funkce a datové struktury. </p>
-                <button class="btn btn-secondary show-code-btn">Show Code</button>
-                <div class="code-display" style="display:none;"></div>
+                <a href="https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/Core.psm1" class="btn btn-secondary" target="_blank">📂 View on GitHub</a>
             </div>
         </div>
     </section>
@@ -789,34 +759,5 @@
             <p class="copyright">© 2025 KrakeCZ. Všechna práva vyhrazena.  Používáte na vlastní riziko.</p>
         </div>
     </footer>
-    <script>
-        document.querySelectorAll('.show-code-btn').forEach(btn => {
-            btn.addEventListener('click', async function() {
-                const card = this.closest('.module-card');
-                const codeDiv = card.querySelector('.code-display');
-                if (codeDiv.style.display === 'block') {
-                    codeDiv.style.display = 'none';
-                    this.textContent = 'Show Code';
-                    return;
-                }
-                this.textContent = 'Loading...';
-                const filenames = Array.from(card.querySelectorAll('.filename a')).map(a => a.textContent.trim());
-                let content = '';
-                for (const filename of filenames) {
-                    const url = `https://raw.githubusercontent.com/KrakeCZ/Krake-FIX/main/Modules/${filename}`;
-                    try {
-                        const response = await fetch(url);
-                        const text = await response.text();
-                        content += `<h4>${filename}</h4><pre><code>${text.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</code></pre>`;
-                    } catch (e) {
-                        content += `<h4>${filename}</h4><p>Error loading code</p>`;
-                    }
-                }
-                codeDiv.innerHTML = content;
-                codeDiv.style.display = 'block';
-                this.textContent = 'Hide Code';
-            });
-        });
-    </script>
 </body>
 </html>
