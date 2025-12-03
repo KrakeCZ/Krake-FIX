@@ -1,31 +1,51 @@
-🚀 Krake-FIX ⚡
-expertní skript určený pro agresivní debloat a optimalizaci systému Windows. Je navržen specificky pro pokročilé uživatele, administrátory připravující referenční image, nebo pro nas[...]  
+# Krake-FIX: Expertní Optimalizátor Systému Windows pro Herní Výkon
 
-Ultimátní optimalizační toolkit pro Windows zaměřený na kompetitivní hraní, minimální latenci a konzistentnim FPS.  
+[![Version](https://img.shields.io/badge/Version-2.0-blue.svg)](https://github.com/KrakeCZ/Krake-FIX/releases)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![PowerShell 5.1+](https://img.shields.io/badge/PowerShell-5.1%2B-blue.svg)](https://learn.microsoft.com/en-us/powershell/)
+[![Windows 10/11](https://img.shields.io/badge/Windows-10%2F11-green.svg)](https://www.microsoft.com/en-us/windows)
+[![GitHub Issues](https://img.shields.io/github/issues/KrakeCZ/Krake-FIX.svg)](https://github.com/KrakeCZ/Krake-FIX/issues)
+=============================================================
+**Krake-FIX** je expertní skript určený pro agresivní debloat a optimalizaci systému Windows. Je navržen specificky pro pokročilé uživatele, administrátory připravující referenční image, nebo pro nasazení na specializovaných herních (esports) stanicích, kde je vyžadována minimalizace systémových procesů a dosažení maximálního výkonu s minimální latencí.
 
-Tento nástroj je navržen pro maximální výkon na herních a testovacích stanicích.  
-NENÍ určen pro pracovní počítače nebo systémy s citlivými daty.  
+Ultimátní optimalizační toolkit pro Windows zaměřený na kompetitivní hraní, minimální latenci a konzistentní FPS. Tento nástroj je navržen pro maximální výkon na herních a testovacích stanicích. **NENÍ určen pro pracovní počítače nebo systémy s citlivými daty.**
+=============================================================
+> **⚠️ DŮLEŽITÁ VAROVÁNÍ**  
+> Tento nástroj provádí hloubkové změny v konfiguraci systému Windows.
+> Je určen výhradně pro expertní uživatele na osobních (herních/testovacích) počítačích.
+> 
+> - **VYPÍNÁ BEZPEČNOST**: Modul Security (chráněný heslem) je navržen tak, aby vypnul systémové ochrany jako CPU Mitigace (Spectre/Meltdown), VBS, HVCI (Integrita jádra), LSA Protection.
+> - 
+> - **AGRESIVNÍ DEBLOAT**: Režim Tweak C trvale odstraní základní systémové aplikace, včetně Xbox aplikací, Kalkulačky a Fotek (využij [RestoreOLD_Windows_Photo_Viewer_CURRENT_USER.reg](RestoreOLD_Windows_Photo_Viewer_CURRENT_USER.reg) pro obnovu Photo Vieweru).
+> - 
+> - **BLOKACE SYSTÉMU**: Modul MEBlock (Microsoft Edge Block) používá ACL zámky k zakázání (DENY) přístupu pro SYSTEM a TrustedInstaller, aby se zabránilo automatické opravě Edge.
+> - 
+> - **VYTVOŘTE ZÁLOHU**: Před použitím vždy vytvořte bod obnovení systému nebo kompletní bitovou kopii disku. Ideálně vytvoření bootovacího USB klíče s Acronis True Image 2021. Práce pro RUFUS.
+> - 
+> - **POUŽÍVÁTE NA VLASTNÍ RIZIKO**: Autor nenese žádnou odpovědnost za ztrátu dat nebo poškození systému.  
+> - **MS Store obnova**: Instalace Xbox app z MS webu vyvolá závislost instalace MS Store! Odebral jsem odinstalaci MS Store, ale pokud potřebuješ – reinstaluj z webu MS Xbox app.
+> - 
+> - **HOSTS blokování**: Pokud použiješ HOSTS – Tvůj antivirus může falešně ohlasit tuto akci jako nebezpečnou! Důvod: Blokování Microsoft domén (a-msedge.net, activity.windows.com atd., a 0.0.0.0). Historicky populární metoda, ale v moderních Windows ji Defender detekuje jako SettingsModifier:Win32/HostsFileHijack. Doporučuji registry/služby místo HOSTS. Výchozí obsah HOSTS pro obnovu: (zde plný text výchozího HOSTS souboru).
+> - 
+> - **Tento nástroj mění základní systémová nastavení!!!**  
+> - **NE pro produkční systémy** - Pouze pro herní/testovací počítače.  
+> - **Bezpečnostní funkce vypnuty** - Některé moduly vypínají Windows Defender, VBS, HVCI.  
+> - **Změny systému** - Registry, služby, bcdedit operace, ACL změny.  
+> - **Vytvoř zálohy** - Vždy vytvořte bod obnovení systému před použitím.  
+> - **Restart nutný** - Většina úprav vyžaduje restart PC.  
+> - **Antivirus vypnutý** - Některé konfigurace vypínají ochranu v reálném čase viz security sekce!
+> - 
+> - **⚡ POUŽÍVEJ NA VLASTNÍ RIZIKO ⚡** - Tento nástroj je určený pro: Herní PC (e-sports, competitive, casual), Testovací prostředí, Dual-boot systémy s testovacím OS, Pokročilé uživatele, kteří rozumí rizikům.
+> - 
+> -⚠️❗️ **NENÍ doporučený pro:** Pracovní počítače, Systémy s citlivými daty, Sdílené/veřejné počítače, Systémy vyžadující maximální zabezpečení.❗️
+>
+> - 
+> - **POZOR hPET**: Není vhodný pro moderní CPU!!! Pokud bude Win slowmo, dej zpět – nastavil si to v sekci 7!
+> - 
+> - **Změňte condrv typ spouštění služby (pokročilí uživatele)**: Chyba je často spojena s tím, že condrv se služba nespustí automaticky, když je potřeba. Otevřete Editor registru zadáním regedit vyhledávacího dotazu do nabídky Start a spuštěním jako správce.
+> -  Přejděte k následující klávese: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\condrv. V pravém podokně vyhledejte Start položku. Dvakrát klikněte Start a změňte jeho hodnotu z 3 (manuální) na 2 (automatické). Restartujte počítač, aby se změna projevila.
 
-🛡️ VYPÍNÁ BEZPEČNOST: Modul Security  (chráněný heslem) je navržen tak, aby vypnul systémové ochrany jako CPU Mitigace (Spectre/Meltdown), VBS, HVCI (Integrita jádra), LSA Protection[...]  
-
-🗑️ AGRESIVNÍ DEBLOAT: Režim Tweak C  trvale odstraní základní systémové aplikace, včetně Microsoft Store(na vyžadaní,odebral jsem to), Xbox aplikací, Kalkulačky a Fotek (využij [...]  
-
-⛔ BLOKACE SYSTÉMU: Modul MEBlock (Microsoft Edge Block) používá ACL zámky k zakázání (DENY) přístupu pro SYSTEM a TrustedInstaller , aby se zabránilo automatické opravě Edge.  
-
-💾 VYTVOŘTE ZÁLOHU: Před použitím vždy vytvořte bod obnovení systému nebo kompletní bitovou kopii disku.  
-ideálně "Vytvoření bootovacího USB klíče s Acronis True Image 2021. Práce pro RUFUS."  
-
-⚡ Používáte na vlastní riziko. Autor nenese žádnou odpovědnost za ztrátu dat nebo poškození systému. ⚡  
-
-Upozornění: Tento nástroj provádí hloubkové změny v konfiguraci systému Windows. Je určen výhradně pro expertní uživatele na osobních (herních/testovacích) počítačích. 
-
-<p align="center">
-  <img src="Screenshots/shot001.png" width="400" alt="Screenshot 5"/>
-  
-## ⚠️ **DŮLEŽITÁ VAROVÁNÍ**  
-ms store obov - instalaci xboxapp z Mswebu , vyvolá závislost instalace MsStore!  
-Odebral jsem odinstalaci MsStore.. ale kdyby-Reinstaluj z webu MS xboxxapp 
-vyvolá zavislost instalace MsStore
+- 
 Pokud Použiješ HOSTS - Tvuj antivirus muze FALESNE ohlasit tuto akci jako nebezpecnou!
 Duvod: ## Blokování Microsoft domén
 <details>
@@ -110,144 +130,235 @@ wes.df.telemetry.microsoft.com
 64.4.54.254
 ```
 </details>
-TweakC odstraní fotky app-> [(https://github.com/KrakeCZ/Krake-FIX/blob/main/RestoreOLD_Windows_Photo_Viewer_CURRENT_USER.reg)]
-
-pokud se rozbije 
-<details>
-<summary>CMD/terminal/pwrshel viz <p align="center">
-  <img src="Screenshots/shot-x1.png" width="80" alt="Screenshot 1"/>
-  <img src="Screenshots/shot-x2.png" width="80" alt="Screenshot 2"/>
-</p> </summary>
-
-```
-Změňte condrvtyp spouštění služby (pokročilí uživatelé)
-Chyba je často spojena s tím, že condrvse služba nespustí automaticky, když je potřeba. 
-Otevřete Editor registru zadáním regeditvyhledávacího dotazu do nabídky Start a spuštěním jako správce.
-Přejděte k následující klávese: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\condrv.
-V pravém podokně vyhledejte Startpoložku.
-Dvakrát klikněte Starta změňte jeho hodnotu z 3(manuální) na 2(automatické) .
-Restartujte počítač, aby se změna projevila.
-```
-</details>
-
-- **TENTO NÁSTROJ MĚNÍ ZÁKLADNÍ SYSTÉMOVÁ NASTAVENÍ!!!**  
-- ❌ **NE pro produkční systémy** - Pouze pro herní/testovací počítače  
-- ⚠️ **Bezpečnostní funkce vypnuty** - Některé moduly vypínají Windows Defender, VBS, HVCI  
-- 🔧 **Změny systému** - Registry, služby, bcdedit operace, ACL změny  
-- 💾 **Vytvoř zálohy** - Vždy vytvořte bod obnovení systému před použitím  
-- 🔄 **Restart nutný** - Většina úprav vyžaduje restart PC  
-- 🛡️ **Antivirus vypnutý** - Některé konfigurace vypínají ochranu v reálném čase viz security sekce!   
-
-- **⚡ POUŽÍVEJ NA VLASTNÍ RIZIKO ⚡**  
--Tento nástroj je určený pro:  
-- ✅ Herní PC (e-sports, competitive, casual)  
-- ✅ Testovací prostředí  
-- ✅ Dual-boot systémy s testovacím OS  
-- ✅ Pokročilé uživatele, kteří rozumí rizikům  
-
--**NENÍ doporučený pro:**  
-- ❌ Pracovní počítače  
-- ❌ Systémy s citlivými daty  
-- ❌ Sdílené/veřejné počítače  
-- ❌ Systémy vyžadující maximální zabezpečení
-- 
-
- -🎯 Funkce  
-- **Základní schopnosti**  
-- 🎮 **Herní optimalizace** - Snížení input lagu, zvýšení FPS, optimalizace CPU/GPU  
-- 🗑️ **Windows debloating** - Odstranění bloatwaru, vypnutí telemetrie, čištění AppX balíčků  
-- 🌐 **Síťové úpravy** - TCP/IP optimalizace, konfigurace DNS, ladění Nagle algoritmu  
-- 🔒 **Kontrola soukromí** - Vypnutí trackingu, telemetrie, kontrola Windows Update  
-- ⚡ **Zvýšení výkonu** - CPU mitigace OFF, MMCSS ladění, optimalizace paměti  
-- 🛡️ **Bezpečnostní možnosti** - Kontrola VBS/HVCI, správa Defenderu, LSA,TSX Protection  
--POZOR hPET- neni vhodny pro moderní CPU!!! pokud bude win slowmo dej zpět -nastavil si to v sekci 7!  
-
- 💻 Systémové požadavky OS: Windows 10 (1903+) nebo Windows 11 (25H2+). PowerShell: 5.1 nebo novější.  
-*Oprávnění: Plná administrátorská oprávnění.   
-```
-1        Set-ExecutionPolicy -ExecutionPolicy Undefined -Scope CurrentUser -Force  
-2        Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope LocalMachine -Force  
- Zruší pravidlo pro uživatele (1) a poté povolí spuštění všech skriptů pro celý počítač (2).  
-3. po Tweaku můžes vrátit práva zpět   
-         Set-ExecutionPolicy -ExecutionPolicy Restricted -Scope LocalMachine -Force  
-Pokud chcete mít možnost spouštět vlastní lokální skripty (ale stále blokovat ty stažené z internetu) :  
-         Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine -Force  
-```  
-Prostředí: Důrazně doporučeno na čisté instalaci Windows po aktualním Update ,  
-
-<details>
-<summary>použivám Krake-FiX  po aplikaci nástroje
- Winutil & shutup O O -> k blokaci telemetrie/služeb manualně atd..  
- </summary>
-
-<p align="center">
-  <img src="Screenshots/shot-winut.png" width="200" alt="Screenshot"/>  
-</p>
-
-
-</details>
 
  
-⚡ Jak Použít (Rychlý Start)
- 
+> - **Tento nástroj mění základní systémová nastavení!!!**  
+> - **NE pro produkční systémy** - Pouze pro herní/testovací počítače.  
+> - **Bezpečnostní funkce vypnuty** - Některé moduly vypínají Windows Defender, VBS, HVCI.  
+> - **Změny systému** - Registry, služby, bcdedit operace, ACL změny.  
+> - **Vytvoř zálohy** - Vždy vytvořte bod obnovení systému před použitím.  
+> - **Restart nutný** - Většina úprav vyžaduje restart PC.  
+> - **Antivirus vypnutý** - Některé konfigurace vypínají ochranu v reálném čase viz security sekce!  
+
+> - **⚡ POUŽÍVEJ NA VLASTNÍ RIZIKO ⚡** - Tento nástroj je určený pro: Herní PC (e-sports, competitive, casual), Testovací prostředí, Dual-boot systémy s testovacím OS, Pokročilé uživatele, kteří rozumí rizikům.  
+> - **NENÍ doporučený pro:** Pracovní počítače, Systémy s citlivými daty, Sdílené/veřejné počítače, Systémy vyžadující maximální zabezpečení.  
+> - **POZOR hPET**: Není vhodný pro moderní CPU!!! Pokud bude Win slowmo, dej zpět – nastavil si to v sekci 7!  
+> - **Změňte condrv typ spouštění služby (pokročilí uživatele)**: Chyba je často spojena s tím, že condrv se služba nespustí automaticky, když je potřeba. Otevřete Editor registru zadáním regedit vyhledávacího dotazu do nabídky Start a spuštěním jako správce. Přejděte k následující klávese: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\condrv. V pravém podokně vyhledejte Start položku. Dvakrát klikněte Start a změňte jeho hodnotu z 3 (manuální) na 2 (automatické). Restartujte počítač, aby se změna projevila.
+
+## Funkce
+- **🎮 Herní optimalizace**: Snížení input lagu, zvýšení FPS, optimalizace CPU/GPU.  
+- **🗑️ Windows debloating**: Odstranění bloatwaru, vypnutí telemetrie, čištění AppX balíčků.  
+- **🌐 Síťové úpravy**: TCP/IP optimalizace, konfigurace DNS, ladění Nagle algoritmu.  
+- **🔒 Kontrola soukromí**: Vypnutí trackingu, telemetrie, kontrola Windows Update.  
+- **⚡ Zvýšení výkonu**: CPU mitigace OFF, MMCSS ladění, optimalizace paměti.  
+- **🛡️ Bezpečnostní možnosti**: Kontrola VBS/HVCI, správa Defenderu, LSA, TSX Protection.
+
+## Moduly
+Skript je modulární – všechny moduly jsou v [/Modules](https://github.com/KrakeCZ/Krake-FIX/tree/main/Modules). Zde je přehled:
 ```
-Vytvořte Bod Obnovy: Než začnete, vytvořte bod obnovení systému!  
-Spusťte Terminal / powershell  jako Administrátor.  
- Invoke-Expression "rstrui.exe"  
- po zaloze  umistění kde je Main.ps1 a složka modules , kopiruju na C:\  
-cd C:\  
-udělit opravnění *  
-C:\.\Main.ps1  
-Proveďte Pre-Tweak Kontrolu: V hlavním menu vyberte [0] PRE-TWEAK Kontrola závislostí . Tím zajistíte, že eskalace oprávnění bude fungovat správně.  
-Aplikujte Debloat: Vyberte [1] Aplikovat obecné tweaky a zvolte úroveň (doporučeno Tweak A/B ] pro většinu hráčů, Tweak C  pro experty).  
+| Modul Název | Popis |
+|-------------|-------|
+| AMD_Opt.psm1 | Optimalizace pro AMD GPU (latency, performance, stability tweaks). |
+| Core.psm1 | Základní knihovna funkcí, oprávnění, logování. |
+| Debloat.psm1 | Debloat úrovně (light/medium/heavy), registry tweaks bez mazání app. |
+| Diagnostics.psm1 | Systémová diagnostika, CPU/RAM/GPU info, dump analýza. |
+| Edge_Block.psm1 | Blokace MS Edge (registry/IFEO/ACL). |
+| Gaming_Core.psm1 | IO page lock, priorita procesů, fix input lagu. |
+| GPU_Adv.psm1 | Podpora HAGS, Game Mode, MPO, ReBAR. |
+| GPU_Base.psm1 | Obecné GPU optimalizace. |
+| Intel_Opt.psm1 | Registry tweaks pro Intel GPU. |
+| MMCSS_Tuner.psm1 | Optimalizace Multimedia Class Scheduler (Affinity pro Game/Audio/Display). |
+| Net_Stack.psm1 | TCP/IP optimalizace, vypnutí Nagle, DNS. |
+| No_Track.psm1 | Blokace sběru dat a diagnostiky (HOSTS). |
+| NVIDIA_Opt.psm1 | Registry tweaks pro NVIDIA GPU. |
+| Photo_Viewer.psm1 | Obnovení starého Windows Photo Vieweru. |
+| Power_Ult.psm1 | Aktivace Ultimate Performance planu, unpark jader. |
+| PreTweak.psm1 | Kontrola systému před aplikací tweaků (PsExec/LanmanServer). |
+| Restore_Pt.psm1 | Nástroje pro opravu Windows (DISM, SFC, CHKDSK). |
+| Sec_Core.psm1 | Vypnutí Spectre/Meltdown, VBS, Hyper-V, Defender. |
+| Svc_Reset.psm1 | Obnova služeb do výchozího stavu. |
+| Sys_Opt.psm1 | Win32PrioritySeparation, optimalizace klávesnice/myši. |
+| Win_Update.psm1 | Správa Windows Update (vypnutí/zapnutí/přizpůsobení). |
+```
+Celkem 28 modulů s 277+ tweaky. Každý modul má zdrojový kód v [/Modules](https://github.com/KrakeCZ/Krake-FIX/tree/main/Modules).
+
+## Systémové Požadavky
+- **OS**: Windows 10 (1903+) nebo Windows 11 (25H2+).  
+- **PowerShell**: 5.1 nebo novější.  
+- **Oprávnění**: Plná administrátorská oprávnění.  
+- **Doporučeno**: Bootovací USB s Acronis True Image pro zálohu.  
+- **PsExec**: Skript používá psexec64.exe k získání tokenu pro nastavení služeb. Uživatel může stáhnout z webu https://learn.microsoft.com/cs-cz/sysinternals/downloads/psexec a nahradit ho Modules/Bin/Psexec64.exe.
+
+## Instalace a Použití
+1. **Stáhnout Repozitář**:  
+git clone https://github.com/KrakeCZ/Krake-FIX.git
+cd Krake-FIX
+
+
+Nebo stáhni ZIP z [GitHubu](https://github.com/KrakeCZ/Krake-FIX).
+
+2. **Příprava**:  
+- Vytvoř bod obnovy: `rstrui.exe`.  
+- Nastav Execution Policy (jako Admin):
+Set-ExecutionPolicy -ExecutionPolicy Undefined -Scope CurrentUser -Force
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope LocalMachine -Force
+
+
+Po použití vrať zpět: `Set-ExecutionPolicy -ExecutionPolicy Restricted -Scope LocalMachine -Force`.  
+Pro lokální skripty: `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine -Force`.
+
+3. **Spuštění**:  
+=============================================================
+- Zkopíruj `Main.ps1` a složku `Modules` na `C:\`.  
+- Spusť jako Admin: `C:\Main.ps1`.  
+- Proveď **Pre-Tweak kontrolu** (volba [0]).
+=============================================================
+
+4. **Příklady Aplikace Tweaks**:  
+=============================================================
+- [1] Obecné tweaky: Vyber variantu A/B/C.  
+- [2] GPU tweaky: Vyber podle výrobce (NVIDIA/AMD/Intel).  
+- [12] Síťové optimalizace: Nagle, TCP/IP.  
+- [17] Nastavení priorit pro hry a audio.  
+- [3] Win32PrioritySeparation: Esports/Gaming.  
+- [7] Security Hazard Tweaks: Heslo pro přístup.  
+- Po aplikaci **restartuj PC**.
+=============================================================
+
+## Obnova Změn
+=============================================================
+- **Rychlá Obnova**: Použij bod obnovy systému.  
+- V skriptu:  
+- [6] Obnovit bezpečné výchozí nastavení (Security).  
+- [1] → [R] Reset služeb.  
+- [13] → [6] Oprava Windows Update.  
+- [16] → [R] Odblokování Edge (ACL unlock).  
+- Další: `RestoreOLD_Windows_Photo_Viewer_CURRENT_USER.reg` pro Photo Viewer.  
+- Pro condrv službu: Uprav registry HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\condrv, změň Start z 3 na 2.
+=============================================================
+
+
+## Příklady Výstupu (Screenshots)
+Zde jsou příklady, jak vypadá rozhraní skriptu. (Nahraj screenshoty do `/screenshots/` v repo pro integraci.)
+```
+=============================================================
+- **Hlavní Menu**:  
+![Hlavní Menu](/screenshots/main-menu.png)  
+Přehled všech sekcí (Pre-Tweak, Debloat, GPU, Security atd.).
+
+- **Obecné Tweaky**:  
+![Obecné Tweaky](/screenshots/general-tweaks.png)  
+Výběr varianty (Registry Only, Base, Moderate, Ultra).
+
+- **Systémové Udalosti**:  
+![Systémové Udalosti](/screenshots/system-events.png)  
+Zobrazení logů (System Log, Application Log).
+
+- **Analýza Dump Souboru**:  
+![Analýza Dump](/screenshots/dump-analysis.png)  
+Analýza BSOD dumpů (příklad BugCheck 0x34).
+
+- **Nastavení BSOD Dumpů**:  
+![Nastavení BSOD](/screenshots/bsod-settings.png)  
+Výběr typů dumpů (MiniDump, Kernel Dump, Complete Dump).
+
+- **NVIDIA Telemetrie**:  
+![NVIDIA Telemetrie](/screenshots/nvidia-telemetry.png)  
+Správa NVIDIA telemetrie (Zakázat/Povolit).
+
+- **NVIDIA Control Panel**:  
+![NVIDIA Control Panel](/screenshots/nvidia-control.png)  
+Správa služby (Povolit/Zakázat).
+
+- **Statická Diagnostika**:  
+![Statická Diagnostika](/screenshots/static-diagnostics.png)  
+Snapshot systému (CPU, RAM, GPU info).
+
+- **Gaming Performance Tweaks**:  
+![Gaming Tweaks](/screenshots/gaming-tweaks.png)  
+Optimalizace pro hraní (IO Page Lock Limit).
+
+- **Plány Napájení**:  
+![Plány Napájení](/screenshots/power-plans.png)  
+Správa power planů (Ultimate Performance, Balanced).
+
+- **Pre-Tweak Kontrola**:  
+![Pre-Tweak](/screenshots/pre-tweak.png)  
+Kontrola závislostí (PsExec, LanmanServer).
+
+- **Intel iGPU Tweaky**:  
+![Intel iGPU](/screenshots/intel-igpu.png)  
+Kategorie pro Intel UHD Graphics.
+
+- **Systémová Oprava**:  
+![Systémová Oprava](/screenshots/system-repair.png)  
+DISM, SFC, CHKDSK nástroje.
+
+- **TCP/IP Optimalizace**:  
+![TCP/IP](/screenshots/tcp-ip.png)  
+Nagle algoritmus, síťové adaptery.
+
+- **Uprava Games Profilu**:  
+![Games Profil](/screenshots/games-profile.png)  
+MMCSS profily pro hry.
+
+- **AMD GPU Tweaky**:  
+![AMD GPU](/screenshots/amd-gpu.png)  
+Latency, Performance, Stability.
+
+- **H.I.D. Tweak Menu**:  
+![HID Tweak](/screenshots/hid-tweak.png)  
+Latency vstupu (klávesnice/myš).
+
+- **Uprava Audio Profilu**:  
+![Audio Profil](/screenshots/audio-profile.png)  
+MMCSS pro audio.
+
+- **Reset Síťě**:  
+![Reset Síť](/screenshots/network-reset.png)  
+Reset adapterů, Winsock, TCP/IP.
+
+- **Game + Audio Priority**:  
+![Game Audio Priority](/screenshots/game-audio-priority.png)  
+Priorita pro hry a audio.
+
+- **Win32PrioritySeparation**:  
+![Win32Priority](/screenshots/win32-priority.png)  
+Profily (Esports, Gaming, Stability).
+
+- **Manuální Nastavení Globálních TCP**:  
+![Globální TCP](/screenshots/global-tcp.png)  
+NETSH parametry.
+
+- **Windows Update Management**:  
+![Windows Update](/screenshots/windows-update.png)  
+Nastavení updates (Security, Feature).
+
+- **Rizikové Tweaky**:  
+![Rizikové Tweaky](/screenshots/security-hazard.png)  
+Security Hazard menu (Mitigace, Updates, VBS).
+
+- **Bezpečnostní Tweaky**:  
+![Bezpečnostní Tweaky](/screenshots/security-tweaks.png)  
+Výběr kategorií (Bezpečnostní, Vyšší výkonnostní).
+=============================================================
 ```
 
-=========================================================================================
-Aplikujte Herní Tweaky:  
+
+## FAQ
 ```
-[2] GPU Tweaky -> Vyberte svého výrobce (NVIDIA, AMD, Intel) a aplikujte profily Latence nebo Výkonu.  
-[12] Síťové optimalizace -> TCP/IP -> [4] Optimalizace Nagle (vypněte Nagle pro váš herní adaptér).  
-[17] GAME + AUDIO Priority (MMCSS) -> [1] Upravit GAMES Profil a nastavte vysokou prioritu .  
-[3] Win32PrioritySeparation -> Zvolte profil [1] (Ultra Esports) nebo [3] (Ultra Gaming) .  
-(Volitelné) Aplikujte Hazard Tweaky: Pokud jste si vědomi rizik, vstupte do [7] Security Hazard Tweaks (heslo: extreme ) a vypněte CPU Mitigace, HVCI a VBS.  
-
-Restartujte Počítač: Většina hloubkových změn vyžaduje restart.  
-```  
-============================================================================================================================
-
-🎯 Filozofie: Nulový Overhead (Žádné "Watchdogy")  
-Tento nástroj je navržen pro kompetitivní hráče. Na rozdíl od jiných optimalizačních nástrojů,  
-KRAKE-FIX neinstaluje žádné služby na pozadí, "watchdogy" nebo agenty, které běží 24/7.!!!  
-Filozofie je jednoduchá:  
-Aplikuj (Apply): Provedete jednorázovou, hloubkovou konfiguraci systému (registry, ACL, služby).  
-Restartuj (Reboot): Systém se spustí v optimalizovaném stavu.  
-Hraj (Play): Užijte si 0% CPU overhead, 0 MB využité RAM a nulový I/O dopad od samotného nástroje během hraní.  
-Jedná se o statickou konfiguraci, nikoli o proces běžící na pozadí, který by mohl způsobit micro-stuttering nebo krást systémové prostředky během hry .  
- 
-============================================================================================================================
-
-🔄 Proces Obnovy (Jak vrátit změny)  
+- **Antivirus blokuje HOSTS?** Ano, falešný poplach kvůli blokaci MS domén. Přidej výjimku nebo dočasně vypni.  
+- **Chyba s `condrv` službou?** Spusť [Restore_Pt] pro opravu.  
+- **Proč vypnout Defender?** Pro nulovou latenci v hrách – ale jen na izolovaném PC!  
+- **Kompatibilita s LTSC/Server?** Ano, testováno na Windows LTSC a Server 2022/2025, ale otestuj Pre-Check.  
+- **Více info?** Podívej se na [Modules](https://github.com/KrakeCZ/Krake-FIX/tree/main/Modules) nebo web.
 ```
-Pokud narazíte na problémy nebo chcete systém vrátit do výchozího stavu:  
-Použijte Bod Obnovy Systému (System Restore Point): Toto je nejjednodušší a nejbezpečnější metoda.  
-Obnovte Bezpečnostní Tweaky:  
-Spusťte Main.ps1 -> [6] Obnovit bezpečné výchozí nastavení Windows (RevertHazard.psm1) .  
-Tím se obnoví všechny tweaky z modulu Security (VBS, HVCI, Defender atd.) na jejich výchozí (zapnutý) stav.  
-Obnovte Služby:  
-Spusťte Main.ps1 -> [1] Aplikovat obecné tweaky -> [R] TWEAK R - Reset služeb (TweakR.psm1) .  
-Tím se obnoví a spustí 277+ systémových služeb do výchozího stavu.  
-Opravte Windows Update:  
-Pokud WU nefunguje, použijte Main.ps1 -> [13] Windows Update Management -> [6] Repair & Reset (Updates.psm1) .  
-Odblokujte Edge:  
-Pokud jste použili Hardcore blokaci, musíte nejprve spustit Main.ps1 -> [16] Edge Blockade -> [R] ACL UNLOCK (tím se odstraní DENY pravidla) .  
-Poté spusťte [U] UNLOCK/REVERT pro odstranění IFEO a Firewallu .  
-```  
 
-==========================================================================================================
+## Licence
+MIT License – software poskytován „jak je“, bez záruk. Viz [LICENSE](LICENSE).
+
 
 ## 📄 License
-
-This project is licensed under the **MIT License**.
 
 ```
 MIT License
