@@ -9,12 +9,17 @@
 **Krake-FIX** je expertní skript určený pro agresivní debloat a optimalizaci systému Windows. Je navržen specificky pro pokročilé uživatele, administrátory připravující referenční image, nebo pro nasazení na specializovaných herních (esports) stanicích, kde je vyžadována minimalizace systémových procesů a dosažení maximálního výkonu s minimální latencí.
 
 Ultimátní optimalizační toolkit pro Windows zaměřený na kompetitivní hraní, minimální latenci a konzistentní FPS. Tento nástroj je navržen pro maximální výkon na herních a testovacích stanicích. 
-⚠️❗️**NENÍ určen pro pracovní počítače nebo systémy s citlivými daty.**⚠️❗️
+=============================================================
+-
+-
+- ⚠️❗️**NENÍ určen pro pracovní počítače nebo systémy s citlivými daty.**⚠️❗️
 
- **⚡ POUŽÍVEJ NA VLASTNÍ RIZIKO ⚡** - Tento nástroj je určený pro: Herní PC (e-sports, competitive, casual), Testovací prostředí, Dual-boot systémy s testovacím OS, Pokročilé uživatele, kteří rozumí rizikům.
+- **⚡ POUŽÍVEJ NA VLASTNÍ RIZIKO ⚡**
+- - Tento nástroj je určený pro: Herní PC (e-sports, competitive, casual), Testovací prostředí, Dual-boot systémy s testovacím OS, Pokročilé uživatele, kteří rozumí rizikům.
 > - 
 > -⚠️❗️ **NENÍ doporučený pro:** ⚠️❗️
-❗️Pracovní počítače, Systémy s citlivými daty, Sdílené/veřejné počítače, Systémy vyžadující maximální zabezpečení.❗️
+- ❗️🛡️ Pracovní počítače, Systémy s citlivými daty, Sdílené/veřejné počítače, Systémy vyžadující maximální zabezpečení.❗️
+=============================================================
 
 ## Funkce
 - **🎮 Herní optimalizace**: Snížení input lagu, zvýšení FPS, optimalizace CPU/GPU.  
