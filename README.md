@@ -8,7 +8,23 @@
 =============================================================
 **Krake-FIX** je expertní skript určený pro agresivní debloat a optimalizaci systému Windows. Je navržen specificky pro pokročilé uživatele, administrátory připravující referenční image, nebo pro nasazení na specializovaných herních (esports) stanicích, kde je vyžadována minimalizace systémových procesů a dosažení maximálního výkonu s minimální latencí.
 
-Ultimátní optimalizační toolkit pro Windows zaměřený na kompetitivní hraní, minimální latenci a konzistentní FPS. Tento nástroj je navržen pro maximální výkon na herních a testovacích stanicích. **NENÍ určen pro pracovní počítače nebo systémy s citlivými daty.**
+Ultimátní optimalizační toolkit pro Windows zaměřený na kompetitivní hraní, minimální latenci a konzistentní FPS. Tento nástroj je navržen pro maximální výkon na herních a testovacích stanicích. 
+⚠️❗️**NENÍ určen pro pracovní počítače nebo systémy s citlivými daty.**⚠️❗️
+
+ **⚡ POUŽÍVEJ NA VLASTNÍ RIZIKO ⚡** - Tento nástroj je určený pro: Herní PC (e-sports, competitive, casual), Testovací prostředí, Dual-boot systémy s testovacím OS, Pokročilé uživatele, kteří rozumí rizikům.
+> - 
+> -⚠️❗️ **NENÍ doporučený pro:** ⚠️❗️
+❗️Pracovní počítače, Systémy s citlivými daty, Sdílené/veřejné počítače, Systémy vyžadující maximální zabezpečení.❗️
+
+## Funkce
+- **🎮 Herní optimalizace**: Snížení input lagu, zvýšení FPS, optimalizace CPU/GPU.  
+- **🗑️ Windows debloating**: Odstranění bloatwaru, vypnutí telemetrie, čištění AppX balíčků.  
+- **🌐 Síťové úpravy**: TCP/IP optimalizace, konfigurace DNS, ladění Nagle algoritmu.  
+- **🔒 Kontrola soukromí**: Vypnutí trackingu, telemetrie, kontrola Windows Update.  
+- **⚡ Zvýšení výkonu**: CPU mitigace OFF, MMCSS ladění, optimalizace paměti.  
+- **🛡️ Bezpečnostní možnosti**: Kontrola VBS/HVCI, správa Defenderu, LSA, TSX Protection.
+
+
 =============================================================
 > **⚠️ DŮLEŽITÁ VAROVÁNÍ**  
 > Tento nástroj provádí hloubkové změny v konfiguraci systému Windows.
@@ -138,20 +154,12 @@ wes.df.telemetry.microsoft.com
 > - **Změny systému** - Registry, služby, bcdedit operace, ACL změny.  
 > - **Vytvoř zálohy** - Vždy vytvořte bod obnovení systému před použitím.  
 > - **Restart nutný** - Většina úprav vyžaduje restart PC.  
-> - **Antivirus vypnutý** - Některé konfigurace vypínají ochranu v reálném čase viz security sekce!  
-
+> - **Antivirus vypnutý** - Některé konfigurace vypínají ochranu v reálném čase viz security sekce!
+> - 
 > - **⚡ POUŽÍVEJ NA VLASTNÍ RIZIKO ⚡** - Tento nástroj je určený pro: Herní PC (e-sports, competitive, casual), Testovací prostředí, Dual-boot systémy s testovacím OS, Pokročilé uživatele, kteří rozumí rizikům.  
 > - **NENÍ doporučený pro:** Pracovní počítače, Systémy s citlivými daty, Sdílené/veřejné počítače, Systémy vyžadující maximální zabezpečení.  
 > - **POZOR hPET**: Není vhodný pro moderní CPU!!! Pokud bude Win slowmo, dej zpět – nastavil si to v sekci 7!  
 > - **Změňte condrv typ spouštění služby (pokročilí uživatele)**: Chyba je často spojena s tím, že condrv se služba nespustí automaticky, když je potřeba. Otevřete Editor registru zadáním regedit vyhledávacího dotazu do nabídky Start a spuštěním jako správce. Přejděte k následující klávese: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\condrv. V pravém podokně vyhledejte Start položku. Dvakrát klikněte Start a změňte jeho hodnotu z 3 (manuální) na 2 (automatické). Restartujte počítač, aby se změna projevila.
-
-## Funkce
-- **🎮 Herní optimalizace**: Snížení input lagu, zvýšení FPS, optimalizace CPU/GPU.  
-- **🗑️ Windows debloating**: Odstranění bloatwaru, vypnutí telemetrie, čištění AppX balíčků.  
-- **🌐 Síťové úpravy**: TCP/IP optimalizace, konfigurace DNS, ladění Nagle algoritmu.  
-- **🔒 Kontrola soukromí**: Vypnutí trackingu, telemetrie, kontrola Windows Update.  
-- **⚡ Zvýšení výkonu**: CPU mitigace OFF, MMCSS ladění, optimalizace paměti.  
-- **🛡️ Bezpečnostní možnosti**: Kontrola VBS/HVCI, správa Defenderu, LSA, TSX Protection.
 
 ## Moduly
 Skript je modulární – všechny moduly jsou v [/Modules](https://github.com/KrakeCZ/Krake-FIX/tree/main/Modules). Zde je přehled:
@@ -200,8 +208,8 @@ Nebo stáhni ZIP z [GitHubu](https://github.com/KrakeCZ/Krake-FIX).
 2. **Příprava**:  
 - Vytvoř bod obnovy: `rstrui.exe`.  
 - Nastav Execution Policy (jako Admin):
-Set-ExecutionPolicy -ExecutionPolicy Undefined -Scope CurrentUser -Force
-Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope LocalMachine -Force
+- `Set-ExecutionPolicy -ExecutionPolicy Undefined -Scope CurrentUser -Force`
+- `Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope LocalMachine -Force`
 
 
 Po použití vrať zpět: `Set-ExecutionPolicy -ExecutionPolicy Restricted -Scope LocalMachine -Force`.  
@@ -236,114 +244,6 @@ Pro lokální skripty: `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope
 - Další: `RestoreOLD_Windows_Photo_Viewer_CURRENT_USER.reg` pro Photo Viewer.  
 - Pro condrv službu: Uprav registry HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\condrv, změň Start z 3 na 2.
 =============================================================
-
-
-## Příklady Výstupu (Screenshots)
-Zde jsou příklady, jak vypadá rozhraní skriptu. (Nahraj screenshoty do `/screenshots/` v repo pro integraci.)
-```
-=============================================================
-- **Hlavní Menu**:  
-![Hlavní Menu](/screenshots/main-menu.png)  
-Přehled všech sekcí (Pre-Tweak, Debloat, GPU, Security atd.).
-
-- **Obecné Tweaky**:  
-![Obecné Tweaky](/screenshots/general-tweaks.png)  
-Výběr varianty (Registry Only, Base, Moderate, Ultra).
-
-- **Systémové Udalosti**:  
-![Systémové Udalosti](/screenshots/system-events.png)  
-Zobrazení logů (System Log, Application Log).
-
-- **Analýza Dump Souboru**:  
-![Analýza Dump](/screenshots/dump-analysis.png)  
-Analýza BSOD dumpů (příklad BugCheck 0x34).
-
-- **Nastavení BSOD Dumpů**:  
-![Nastavení BSOD](/screenshots/bsod-settings.png)  
-Výběr typů dumpů (MiniDump, Kernel Dump, Complete Dump).
-
-- **NVIDIA Telemetrie**:  
-![NVIDIA Telemetrie](/screenshots/nvidia-telemetry.png)  
-Správa NVIDIA telemetrie (Zakázat/Povolit).
-
-- **NVIDIA Control Panel**:  
-![NVIDIA Control Panel](/screenshots/nvidia-control.png)  
-Správa služby (Povolit/Zakázat).
-
-- **Statická Diagnostika**:  
-![Statická Diagnostika](/screenshots/static-diagnostics.png)  
-Snapshot systému (CPU, RAM, GPU info).
-
-- **Gaming Performance Tweaks**:  
-![Gaming Tweaks](/screenshots/gaming-tweaks.png)  
-Optimalizace pro hraní (IO Page Lock Limit).
-
-- **Plány Napájení**:  
-![Plány Napájení](/screenshots/power-plans.png)  
-Správa power planů (Ultimate Performance, Balanced).
-
-- **Pre-Tweak Kontrola**:  
-![Pre-Tweak](/screenshots/pre-tweak.png)  
-Kontrola závislostí (PsExec, LanmanServer).
-
-- **Intel iGPU Tweaky**:  
-![Intel iGPU](/screenshots/intel-igpu.png)  
-Kategorie pro Intel UHD Graphics.
-
-- **Systémová Oprava**:  
-![Systémová Oprava](/screenshots/system-repair.png)  
-DISM, SFC, CHKDSK nástroje.
-
-- **TCP/IP Optimalizace**:  
-![TCP/IP](/screenshots/tcp-ip.png)  
-Nagle algoritmus, síťové adaptery.
-
-- **Uprava Games Profilu**:  
-![Games Profil](/screenshots/games-profile.png)  
-MMCSS profily pro hry.
-
-- **AMD GPU Tweaky**:  
-![AMD GPU](/screenshots/amd-gpu.png)  
-Latency, Performance, Stability.
-
-- **H.I.D. Tweak Menu**:  
-![HID Tweak](/screenshots/hid-tweak.png)  
-Latency vstupu (klávesnice/myš).
-
-- **Uprava Audio Profilu**:  
-![Audio Profil](/screenshots/audio-profile.png)  
-MMCSS pro audio.
-
-- **Reset Síťě**:  
-![Reset Síť](/screenshots/network-reset.png)  
-Reset adapterů, Winsock, TCP/IP.
-
-- **Game + Audio Priority**:  
-![Game Audio Priority](/screenshots/game-audio-priority.png)  
-Priorita pro hry a audio.
-
-- **Win32PrioritySeparation**:  
-![Win32Priority](/screenshots/win32-priority.png)  
-Profily (Esports, Gaming, Stability).
-
-- **Manuální Nastavení Globálních TCP**:  
-![Globální TCP](/screenshots/global-tcp.png)  
-NETSH parametry.
-
-- **Windows Update Management**:  
-![Windows Update](/screenshots/windows-update.png)  
-Nastavení updates (Security, Feature).
-
-- **Rizikové Tweaky**:  
-![Rizikové Tweaky](/screenshots/security-hazard.png)  
-Security Hazard menu (Mitigace, Updates, VBS).
-
-- **Bezpečnostní Tweaky**:  
-![Bezpečnostní Tweaky](/screenshots/security-tweaks.png)  
-Výběr kategorií (Bezpečnostní, Vyšší výkonnostní).
-=============================================================
-```
-
 
 ## FAQ
 ```
