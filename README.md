@@ -1,6 +1,6 @@
 <p align="center">
-  <img src="Screenshots/Logo.jpg" width="400" alt="Screenshot 5"/>
-______________________________________________________________
+  <img src="Screenshots/Logo.jpg" width="520" alt="Screenshot 5"/>
+
 
 # Krake-FIX: Expertní Optimalizátor Systému Windows pro Herní Výkon
 [![Version](https://img.shields.io/badge/Version-2.0-blue.svg)](https://github.com/KrakeCZ/Krake-FIX/releases)
