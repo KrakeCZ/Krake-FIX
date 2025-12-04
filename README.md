@@ -1,5 +1,6 @@
 # Krake-FIX: Expertní Optimalizátor Systému Windows pro Herní Výkon
-
+<p align="center">
+  <img src="Screenshots/Logo.jpg" width="400" alt="Screenshot 5"/>
 [![Version](https://img.shields.io/badge/Version-2.0-blue.svg)](https://github.com/KrakeCZ/Krake-FIX/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PowerShell 5.1+](https://img.shields.io/badge/PowerShell-5.1%2B-blue.svg)](https://learn.microsoft.com/en-us/powershell/)
@@ -28,7 +29,9 @@ Ultimátní optimalizační toolkit pro Windows zaměřený na kompetitivní hra
 - **🔒 Kontrola soukromí**: Vypnutí trackingu, telemetrie, kontrola Windows Update.  
 - **⚡ Zvýšení výkonu**: CPU mitigace OFF, MMCSS ladění, optimalizace paměti.  
 - **🛡️ Bezpečnostní možnosti**: Kontrola VBS/HVCI, správa Defenderu, LSA, TSX Protection.
-
+- 
+<p align="center">
+  <img src="Screenshots/shot001.png" width="400" alt="Screenshot 5"/>
 
 =============================================================
 > **⚠️ DŮLEŽITÁ VAROVÁNÍ**  
