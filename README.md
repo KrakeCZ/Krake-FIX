@@ -28,8 +28,8 @@ Pokud jste Krake-FIX stáhli z oficiálního GitHub repozitáře, jsou tato upoz
 Doporučení:
 - Stahujte jen z oficiálních zdrojů.
 - Pokud antivir hlásí „HackTool“, nepanikařte — často jde o falešný poplach.
-- Máte-li pochybnosti, nahraďte psexec64.exe oficiální verzí
-- 🌐 https://learn.microsoft.com/cs-cz/sysinternals/downloads✅️
+- Máte-li pochybnosti, nahraďte psexec64.exe oficiální verzí❗️👇
+- 🌐 👉https://learn.microsoft.com/cs-cz/sysinternals/downloads/psexec 👈✅️
 
   
 - ⚠️❗️**NENÍ určen pro pracovní počítače nebo systémy s citlivými daty.**⚠️❗️
