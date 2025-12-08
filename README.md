@@ -13,8 +13,25 @@
 
 Ultimátní optimalizační toolkit pro Windows zaměřený na kompetitivní hraní, minimální latenci a konzistentní FPS. Tento nástroj je navržen pro maximální výkon na herních a testovacích stanicích. 
 =============================================================
-- 👉 https://krakecz.github.io/Krake-FIX/
--
+- 👉🌐 https://krakecz.github.io/Krake-FIX/🌐👈
+-## ⚠️❗️ Upozornění na PsExec (Microsoft Sysinternals)⚠️❗️
+
+Krake-FIX obsahuje soubor psexec64.exe — jedná se o oficiální nástroj z Microsoft Sysinternals. Originál: https://learn.microsoft.com/cs-cz/sysinternals/downloads/psexec
+
+Některé antiviry a služby (např. VirusTotal) mohou PsExec označit jako „HackTool“.
+Jde o běžnou heuristiku u nástrojů s vyššími oprávněními; neznamená to automaticky, že je Krake-FIX škodlivý.
+
+Krake-FIX používá Psexec64.exe výhradně k získání oprávnění TrustedInstaller a k provedení systémových úkonů (správa služeb, úloh,WinUpdate, aplikace konfigurací). Bez této elevace nelze získat potřebný token(oprávnění Ntsystem TrustedInstaller).
+
+Pokud jste Krake-FIX stáhli z oficiálního GitHub repozitáře, jsou tato upozornění očekávatelná. Pro Vaši stáhněte originální PsExec z odkazu výše a nahraďte pouze psexec64.exe  v Modules/Bin/PsExec/PsExec64.exe.
+
+Doporučení:
+- Stahujte jen z oficiálních zdrojů.
+- Pokud antivir hlásí „HackTool“, nepanikařte — často jde o falešný poplach.
+- Máte-li pochybnosti, nahraďte psexec64.exe oficiální verzí
+- 🌐 https://learn.microsoft.com/cs-cz/sysinternals/downloads✅️
+
+  
 - ⚠️❗️**NENÍ určen pro pracovní počítače nebo systémy s citlivými daty.**⚠️❗️
 
 - **⚡ POUŽÍVEJ NA VLASTNÍ RIZIKO ⚡**
