@@ -13,42 +13,43 @@
 
 Ultimátní optimalizační toolkit pro Windows zaměřený na kompetitivní hraní, minimální latenci a konzistentní FPS. Tento nástroj je navržen pro maximální výkon na herních a testovacích stanicích. 
 =============================================================
-- 👉🌐 https://krakecz.github.io/Krake-FIX/🌐👈
-- 
--## ⚠️❗️ Upozornění na PsExec (Microsoft Sysinternals)⚠️❗️
+> -  👉🌐 https://krakecz.github.io/Krake-FIX/🌐👈
+ 
+> - ## ⚠️❗️ Upozornění na PsExec (Microsoft Sysinternals)⚠️❗️
 
-Krake-FIX obsahuje soubor psexec64.exe — jedná se o oficiální nástroj z Microsoft Sysinternals. Originál: https://learn.microsoft.com/cs-cz/sysinternals/downloads/psexec
+> - Krake-FIX obsahuje soubor psexec64.exe — jedná se o oficiální nástroj z Microsoft Sysinternals.
+- Originál stáhní:👉🌐 https://learn.microsoft.com/cs-cz/sysinternals/downloads/psexec ❗️
+- instalace kopiruj pouze "psexec64.exe" z balíku SysInternals z webu Microsoft ! do > /Modules/Bin/PsExec/Psexec64.exe 
 
-Některé antiviry a služby (např. VirusTotal) mohou PsExec označit jako „HackTool“.
-Jde o běžnou heuristiku u nástrojů s vyššími oprávněními; neznamená to automaticky, že je Krake-FIX škodlivý.
+> - Některé antiviry a služby (např. VirusTotal) mohou PsExec označit jako „HackTool“.
+> - Jde o běžnou heuristiku u nástrojů s vyššími oprávněními; neznamená to automaticky, že je Krake-FIX škodlivý.
 
-Krake-FIX používá Psexec64.exe výhradně k získání oprávnění TrustedInstaller a k provedení systémových úkonů (správa služeb, úloh,WinUpdate, aplikace konfigurací). Bez této elevace nelze získat potřebný token(oprávnění Ntsystem TrustedInstaller).
+> - Krake-FIX používá Psexec64.exe výhradně k získání oprávnění TrustedInstaller a k provedení systémových úkonů (správa služeb, úloh,WinUpdate, aplikace konfigurací).
+> -  Bez této elevace nelze získat potřebný token(oprávnění Ntsystem TrustedInstaller).
 
-Pokud jste Krake-FIX stáhli z oficiálního GitHub repozitáře, jsou tato upozornění očekávatelná. Pro Vaši stáhněte originální PsExec z odkazu výše a nahraďte pouze psexec64.exe  v Modules/Bin/PsExec/PsExec64.exe.
+> - Pokud jste Krake-FIX stáhli z oficiálního GitHub repozitáře, jsou tato upozornění očekávatelná. 
+> - Pro Vaši jistotu si stáhněte originální "PsExec64.exe" z odkazu výše a nahraďte pouze "psexec64.exe" > "Modules/Bin/PsExec/PsExec64.exe".
 
 Doporučení:
-- Stahujte jen z oficiálních zdrojů.
-- Pokud antivir hlásí „HackTool“, nepanikařte — často jde o falešný poplach.
-- Máte-li pochybnosti, nahraďte psexec64.exe oficiální verzí❗️👇
-- 🌐 👉https://learn.microsoft.com/cs-cz/sysinternals/downloads/psexec 👈✅️
+> -  Stahujte jen z oficiálních zdrojů.
+> -  Pokud antivir hlásí „HackTool“, nepanikařte — často jde o falešný poplach.
+> -  Máte-li pochybnosti, nahraďte "psexec64.exe" oficiální verzí❗️👇
+> -  🌐 👉https://learn.microsoft.com/cs-cz/sysinternals/downloads/psexec 👈✅️
 
-  
-- ⚠️❗️**NENÍ určen pro pracovní počítače nebo systémy s citlivými daty.**⚠️❗️
-
-- **⚡ POUŽÍVEJ NA VLASTNÍ RIZIKO ⚡**
-- - Tento nástroj je určený pro: Herní PC (e-sports, competitive, casual), Testovací prostředí, Dual-boot systémy s testovacím OS, Pokročilé uživatele, kteří rozumí rizikům.
-> - 
-> -⚠️❗️ **NENÍ doporučený pro:** ⚠️❗️
-- ❗️🛡️ Pracovní počítače, Systémy s citlivými daty, Sdílené/veřejné počítače, Systémy vyžadující maximální zabezpečení.❗️
+> -  ⚠️❗️**NENÍ určen pro pracovní počítače nebo systémy s citlivými daty.**⚠️❗️
+> - **⚡ POUŽÍVEJ NA VLASTNÍ RIZIKO ⚡**
+> -  Tento nástroj je určený pro: Herní PC (e-sports, competitive, casual), Testovací prostředí, Dual-boot systémy s testovacím OS, Pokročilé uživatele, kteří rozumí rizikům.
+> - ⚠️❗️ **NENÍ doporučený pro:** ⚠️❗️
+> -  ❗️🛡️ Pracovní počítače, Systémy s citlivými daty, Sdílené/veřejné počítače, Systémy vyžadující maximální zabezpečení.❗️
 =============================================================
 
 ## Funkce
-- **🎮 Herní optimalizace**: Snížení input lagu, zvýšení FPS, optimalizace CPU/GPU.  
+- **🎮 Herní optimalizace**: Snížení input lagu, stabilní nebo zvýšení FPS, optimalizace CPU/GPU.  
 - **🗑️ Windows debloating**: Odstranění bloatwaru, vypnutí telemetrie, čištění AppX balíčků.  
 - **🌐 Síťové úpravy**: TCP/IP optimalizace, konfigurace DNS, ladění Nagle algoritmu.  
 - **🔒 Kontrola soukromí**: Vypnutí trackingu, telemetrie, kontrola Windows Update.  
-- **⚡ Zvýšení výkonu**: CPU mitigace OFF, MMCSS ladění, optimalizace paměti.  
-- **🛡️ Bezpečnostní možnosti**: Kontrola VBS/HVCI, správa Defenderu, LSA, TSX Protection.
+- **⚡ Zvýšení výkonu**: H.I.D,W32Prio,FSutil, MMCSS ladění, optimalizace paměti.  
+- **🛡️ Bezpečnostní možnosti**: CPU mitigace OFF/on, Kontrola VBS/HVCI, správa Defenderu, LSA, TSX Protection,Hpet.
 - 
 <p align="center">
   <img src="Screenshots/shot001.png" width="400" alt="Screenshot 5"/>
@@ -58,7 +59,7 @@ Doporučení:
 > Tento nástroj provádí hloubkové změny v konfiguraci systému Windows.
 > Je určen výhradně pro expertní uživatele na osobních (herních/testovacích) počítačích.
 > 
-> - **VYPÍNÁ BEZPEČNOST**: Modul Security (chráněný heslem) je navržen tak, aby vypnul systémové ochrany jako CPU Mitigace (Spectre/Meltdown), VBS, HVCI (Integrita jádra), LSA Protection.
+> - **VYPÍNÁ BEZPEČNOST**: Modul Security (chráněný heslem) je navržen tak, aby vypnul systémové ochrany jako CPU Mitigace (Spectre/Meltdown), VBS, HVCI (Integrita jádra), LSA Protection. Defender , Aktualizace... 
 > - 
 > - **AGRESIVNÍ DEBLOAT**: Režim Tweak C trvale odstraní základní systémové aplikace, včetně Xbox aplikací, Kalkulačky a Fotek (využij [RestoreOLD_Windows_Photo_Viewer_CURRENT_USER.reg](RestoreOLD_Windows_Photo_Viewer_CURRENT_USER.reg) pro obnovu Photo Vieweru).
 > - 
@@ -77,7 +78,7 @@ Doporučení:
 > - **Změny systému** - Registry, služby, bcdedit operace, ACL změny.  
 > - **Vytvoř zálohy** - Vždy vytvořte bod obnovení systému před použitím.  
 > - **Restart nutný** - Většina úprav vyžaduje restart PC.  
-> - **Antivirus vypnutý** - Některé konfigurace vypínají ochranu v reálném čase viz security sekce!
+> - **Antivirus vypnutý** - Některé konfigurace vypínají ochranu v reálném čase viz security sekce! 
 > - 
 > - **⚡ POUŽÍVEJ NA VLASTNÍ RIZIKO ⚡** - Tento nástroj je určený pro: Herní PC (e-sports, competitive, casual), Testovací prostředí, Dual-boot systémy s testovacím OS, Pokročilé uživatele, kteří rozumí rizikům.
 > - 
@@ -194,27 +195,35 @@ Skript je modulární – všechny moduly jsou v [/Modules](https://github.com/K
 ```
 | Modul Název | Popis |
 |-------------|-------|
-| AMD_Opt.psm1 | Optimalizace pro AMD GPU (latency, performance, stability tweaks). |
+
 | Core.psm1 | Základní knihovna funkcí, oprávnění, logování. |
-| Debloat.psm1 | Debloat úrovně (light/medium/heavy), registry tweaks bez mazání app. |
+| CoreParking.psm1 | Zpřístupnění nabídky parkování jader v plánu napajení |
+| Data.psm1 | Centrálni knihovna  pro systemová nastavení Gamming modulu. |
 | Diagnostics.psm1 | Systémová diagnostika, CPU/RAM/GPU info, dump analýza. |
-| Edge_Block.psm1 | Blokace MS Edge (registry/IFEO/ACL). |
-| Gaming_Core.psm1 | IO page lock, priorita procesů, fix input lagu. |
-| GPU_Adv.psm1 | Podpora HAGS, Game Mode, MPO, ReBAR. |
-| GPU_Base.psm1 | Obecné GPU optimalizace. |
-| Intel_Opt.psm1 | Registry tweaks pro Intel GPU. |
-| MMCSS_Tuner.psm1 | Optimalizace Multimedia Class Scheduler (Affinity pro Game/Audio/Display). |
-| Net_Stack.psm1 | TCP/IP optimalizace, vypnutí Nagle, DNS. |
-| No_Track.psm1 | Blokace sběru dat a diagnostiky (HOSTS). |
-| NVIDIA_Opt.psm1 | Registry tweaks pro NVIDIA GPU. |
-| Photo_Viewer.psm1 | Obnovení starého Windows Photo Vieweru. |
-| Power_Ult.psm1 | Aktivace Ultimate Performance planu, unpark jader. |
-| PreTweak.psm1 | Kontrola systému před aplikací tweaků (PsExec/LanmanServer). |
-| Restore_Pt.psm1 | Nástroje pro opravu Windows (DISM, SFC, CHKDSK). |
-| Sec_Core.psm1 | Vypnutí Spectre/Meltdown, VBS, Hyper-V, Defender. |
-| Svc_Reset.psm1 | Obnova služeb do výchozího stavu. |
-| Sys_Opt.psm1 | Win32PrioritySeparation, optimalizace klávesnice/myši. |
-| Win_Update.psm1 | Správa Windows Update (vypnutí/zapnutí/přizpůsobení). |
+| GPU.psm1 | Obecné GPU optimalizace. |
+| GPU_AMD.psm1 | Optimalizace pro AMD GPU (latency, performance, stability tweaks). |
+| GPU_Advanced.psm1 | Podpora HAGS, Game Mode, MPO, ReBAR. |
+| GPU_Intel.psm1 | Registry tweaks pro Intel GPU. |
+| GPU_NVIDIA.psm1 | Registry tweaks pro NVIDIA GPU. |
+| Gaming.psm1 | IO page lock, priorita procesů, fix input lagu. |
+| MEBlock.psm1 | Blokace MS Edge (registry/IFEO/ACL). |
+| MMCSS.psm1 | Optimalizace Multimedia Class Scheduler (Affinity pro Game/Audio/Display). |
+| Network.psm1 | TCP/IP optimalizace, vypnutí Nagle, DNS. |
+| PowerPlan.psm1 | Aktivace Ultimate Performance planu jako Vysoký výkon, Úsporný režim atd. |
+| PreTweak.psm1 | Kontrola systému závislostí před aplikací tweaků (PsExec/LanmanServer). |
+| Restore.psm1 | Nástroje pro opravu Windows (DISM, SFC, CHKDSK). |
+| RevertHazard.psm1 | Obnova nastavení modulu Security.psm1. |
+| Security.psm1 | Vypnutí Spectre/Meltdown, TSX/LSA, VBS, Hyper-V, Defender, WinUpdate |
+| Telemetrie.psm1 | Blokace sběru dat a diagnostiky (HOSTS). |
+| Tweak0.psm1 | Tweak pouze  registry bez mazání app. |
+| TweakA.psm1 | Debloat úrovně (light), registry tweaks, OEM mazání app. |
+| TweakB.psm1 | Debloat úrovně (medium), registry tweaks, OEM+BLOAT mazání app. |
+| TweakC.psm1 | Debloat úrovně (heavy), registry tweaks,OEM+90 bez mazání app. možno přidat vlastní packages |
+| TweakV.psm1 | Obnovení starého Windows Photo Vieweru. |
+| TweakR.psm1 | Obnova služeb do výchozího stavu/Obsahuje všechny služby-jednoduše si uprav jak chceš|
+| System.psm1 | Win32PrioritySeparation, optimalizace HID klávesnice/myši. |
+| Updates.psm1 | Správa Windows Update (vypnutí/zapnutí/přizpůsobení). |
+| Utils.psm1 | Pomocné funkce pro zálohovací operace.  |
 ```
 Celkem 28 modulů s 277+ tweaky. Každý modul má zdrojový kód v [/Modules](https://github.com/KrakeCZ/Krake-FIX/tree/main/Modules).
 
@@ -232,6 +241,8 @@ cd Krake-FIX
 
 
 Nebo stáhni ZIP z [GitHubu](https://github.com/KrakeCZ/Krake-FIX).
+stahni a extrahuj PsExec64.exe z [Microsoft](https://learn.microsoft.com/cs-cz/sysinternals/downloads/psexec)
+ kopiruj pouze "psexec64.exe" z balíku do > /Modules/Bin/PsExec/Psexec64.exe 
 
 2. **Příprava**:  
 - Vytvoř bod obnovy: `rstrui.exe`.  
@@ -246,15 +257,15 @@ Pro lokální skripty: `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope
 3. **Spuštění**:  
 =============================================================
 - Zkopíruj `Main.ps1` a složku `Modules` na `C:\`.  
-- Spusť jako Admin: `C:\Main.ps1`.  
-- Proveď **Pre-Tweak kontrolu** (volba [0]).
+- Spusť Terminál / Powershell jako Admin: `C:\.\Main.ps1`.  
+- Proveďaplikaci tweaku dle libosti Tweak0 jen registry atd.. 
 =============================================================
 
 4. **Příklady Aplikace Tweaks**:  
 =============================================================
 - [1] Obecné tweaky: Vyber variantu A/B/C.  
 - [2] GPU tweaky: Vyber podle výrobce (NVIDIA/AMD/Intel).  
-- [12] Síťové optimalizace: Nagle, TCP/IP.  
+- [12] Síťové optimalizace: DNS, Nagle dle adaptéru, TCP/IP.  
 - [17] Nastavení priorit pro hry a audio.  
 - [3] Win32PrioritySeparation: Esports/Gaming.  
 - [7] Security Hazard Tweaks: Heslo pro přístup.  
@@ -265,8 +276,8 @@ Pro lokální skripty: `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope
 =============================================================
 - **Rychlá Obnova**: Použij bod obnovy systému.  
 - V skriptu:  
-- [6] Obnovit bezpečné výchozí nastavení (Security).  
-- [1] → [R] Reset služeb.  
+- [6] Obnovit bezpečné výchozí nastavení (Security [7]).  
+- [1] → [R] Reset služeb všech Oem Windows.  
 - [13] → [6] Oprava Windows Update.  
 - [16] → [R] Odblokování Edge (ACL unlock).  
 - Další: `RestoreOLD_Windows_Photo_Viewer_CURRENT_USER.reg` pro Photo Viewer.  
