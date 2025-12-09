@@ -14,6 +14,7 @@
 Ultimátní optimalizační toolkit pro Windows zaměřený na kompetitivní hraní, minimální latenci a konzistentní FPS. Tento nástroj je navržen pro maximální výkon na herních a testovacích stanicích. 
 =============================================================
 - 👉🌐 https://krakecz.github.io/Krake-FIX/🌐👈
+- 
 -## ⚠️❗️ Upozornění na PsExec (Microsoft Sysinternals)⚠️❗️
 
 Krake-FIX obsahuje soubor psexec64.exe — jedná se o oficiální nástroj z Microsoft Sysinternals. Originál: https://learn.microsoft.com/cs-cz/sysinternals/downloads/psexec
