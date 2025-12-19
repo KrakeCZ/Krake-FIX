@@ -56,7 +56,7 @@ Doporučení:
 
 =================================================================================================================
 >-# STRUKTURA
->```mermaid
+```mermaid
 graph TD
 KRAKE-FIX (Root)
 │
@@ -112,7 +112,7 @@ KRAKE-FIX (Root)
           ├── Utils.psm1                 --> (Pomocné operace pro zálohování)
           ├── Data.psm1                --> (Univerzální  herní  konfigurace/Pomocné Gaming.psm1)
           └── Diagnostics.psm1 --> (Crash dump analýza, HW Health Check)
-          ```
+```
           
 
 =================================================================================================================
