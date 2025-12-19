@@ -2,14 +2,14 @@
   <img src="Screenshots/Logo.jpg" width="520" alt="Screenshot 5"/>
 
 
-# Krake-FIX: Expertní Optimalizátor Systému Windows pro Herní Výkon
+# Krake-FIX 🚀: Expertní Optimalizátor Systému Windows pro Herní Výkon
 [![Version](https://img.shields.io/badge/Version-2.0-blue.svg)](https://github.com/KrakeCZ/Krake-FIX/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PowerShell 5.1+](https://img.shields.io/badge/PowerShell-5.1%2B-blue.svg)](https://learn.microsoft.com/en-us/powershell/)
 [![Windows 10/11](https://img.shields.io/badge/Windows-10%2F11-green.svg)](https://www.microsoft.com/en-us/windows)
 [![GitHub Issues](https://img.shields.io/github/issues/KrakeCZ/Krake-FIX.svg)](https://github.com/KrakeCZ/Krake-FIX/issues)
 ============================================================
-**Krake-FIX** je expertní skript určený pro agresivní debloat a optimalizaci systému Windows. Je navržen specificky pro pokročilé uživatele, administrátory připravující referenční image, nebo pro nasazení na specializovaných herních (esports) stanicích, kde je vyžadována minimalizace systémových procesů a dosažení maximálního výkonu s minimální latencí.
+**Krake-FIX 🚀** je expertní skript určený pro agresivní debloat a optimalizaci systému Windows. Je navržen specificky pro pokročilé uživatele, administrátory připravující referenční image, nebo pro nasazení na specializovaných herních (esports) stanicích, kde je vyžadována minimalizace systémových procesů a dosažení maximálního výkonu s minimální latencí.
 
 Ultimátní optimalizační toolkit pro Windows zaměřený na kompetitivní hraní, minimální latenci a konzistentní FPS. Tento nástroj je navržen pro maximální výkon na herních a testovacích stanicích. 
 ============================================================
@@ -19,16 +19,19 @@ Ultimátní optimalizační toolkit pro Windows zaměřený na kompetitivní hra
 
 > - Krake-FIX 🚀 obsahuje soubor psexec64.exe 👈 jedná se o oficiální nástroj z Microsoft Sysinternals.
 - Originál stáhní:👉🌐 https://learn.microsoft.com/cs-cz/sysinternals/downloads/psexec ❗️
-- instalace kopiruj pouze "psexec64.exe" z balíku SysInternals z webu Microsoft ! do > /Modules/Bin/PsExec/Psexec64.exe 
-
-> - Některé antiviry a služby (např. VirusTotal) mohou PsExec označit jako „HackTool“.
+- instalace kopiruj pouze "psexec64.exe" z balíku SysInternals z webu Microsoft !
+              └──do místa->/Modules/Bin/PsExec/Psexec64.exe
+  
+> - Některé antiviry a služby (např. VirusTotal) mohou PsExec označit jako „HackTool“💡❗️.
 > - Jde o běžnou heuristiku u nástrojů s vyššími oprávněními; neznamená to automaticky, že je Krake-FIX škodlivý.
 
 > ⚠️ Krake-FIX používá Psexec64.exe výhradně k získání oprávnění TrustedInstaller a k provedení systémových úkonů (správa služeb, úloh,WinUpdate, aplikace konfigurací).
 > -  Bez této elevace nelze získat potřebný token(oprávnění Ntsystem TrustedInstaller).
+> -  viz zdrojový kód v [/Core.psm1](https://github.com/KrakeCZ/Krake-FIX/blob/main/Modules/Core.psm1).
 
 > - Pokud jste Krake-FIX stáhli z oficiálního GitHub repozitáře, jsou tato upozornění očekávatelná. 
-> - Pro Vaši jistotu si stáhněte originální "PsExec64.exe" z odkazu výše a nahraďte pouze "psexec64.exe" > "Modules/Bin/PsExec/PsExec64.exe".
+> - Pro Vaši jistotu si stáhněte originální "PsExec64.exe" z odkazu výše
+> - 👉 nahraďte pouze "psexec64.exe" ve složce "Modules/Bin/PsExec/PsExec64.exe".
 
 Doporučení:
 > -  Stahujte jen z oficiálních zdrojů.
@@ -41,7 +44,8 @@ Doporučení:
 > -  Tento nástroj je určený pro: Herní PC (e-sports, competitive, casual), Testovací prostředí, Dual-boot systémy s testovacím OS, Pokročilé uživatele, kteří rozumí rizikům.
 > - ⚠️❗️ **NENÍ doporučený pro:** ⚠️❗️
 > -  ❗️🛡️ Pracovní počítače, Systémy s citlivými daty, Sdílené/veřejné počítače, Systémy vyžadující maximální zabezpečení.❗️
-> -==================================================================
+> -
+==================================================================
 
 ## Funkce
 - **🎮 Herní optimalizace**: Snížení input lagu, stabilní nebo zvýšení FPS, optimalizace CPU/GPU.  
@@ -50,7 +54,7 @@ Doporučení:
 - **🔒 Kontrola soukromí**: Vypnutí trackingu, telemetrie, kontrola Windows Update.  
 - **⚡ Zvýšení výkonu**: H.I.D,W32Prio,FSutil, MMCSS ladění, optimalizace paměti.  
 - **🛡️ Bezpečnostní možnosti**: CPU mitigace OFF/on, Kontrola VBS/HVCI, správa Defenderu, LSA, TSX Protection,Hpet.
-  
+      
 <p align="center">
   <img src="Screenshots/shot001.png" width="400" alt="Screenshot 5"/>
   
@@ -61,60 +65,60 @@ KRAKE-FIX (Root)
 │
 ├──{ *** Execution Policy (Bypass required)***}
 │
-├── Main.ps1 (Spouštěcí soubor )
+├── Main.ps1 (Spouštěcí soubor)
 │
-└>[ Modules/ ]  (Funkce a  Core,)  
+└>[ Modules/ ]  (Funkce a  Core)  
           │
           ├──> [ Bin/ (Externí binární exekutory)
-          │              └ [PsExec/]
-          │                     ├──> PsExec64.exe  --> (Klíčový nástroj pro TrustedInstaller elevaci)
-          │                     └── PSEXEC64 info.txt      --> (Dokumentace k  původu)
+          │        └ [PsExec/]
+          │           ├──> PsExec64.exe  -> (Klíčový nástroj pro TrustedInstaller elevaci)
+          │           └── PSEXEC64 info.txt  -> (Dokumentace k  původu)
           │             
           │                         *  CORE & SYSTEM INFRASTRUCTURE *
-          ├── Core.psm1        --> (Knihovna funkcí, oprávnění, logování) 
-          ├── PreTweak.ps1     --> (Validace závislostí: PsExec, LanmanServer pro TweakR)
+          ├── Core.psm1        -> (Knihovna funkcí, oprávnění, logování) 
+          ├── PreTweak.ps1     -> (Validace závislostí: PsExec, LanmanServer pro TweakR)
           │
-          │          * ((MODULY: jdou jednoduše uživatelsky upravit))*
+          │        * ((MODULY: jdou jednoduše uživatelsky upravit))*
           │ 
-          │                          *  WINDOWS TWEAKS & DEBLOAT *
-          ├── Tweak0.psm1      --> (Safe: Pouze registry, bez mazání AppX) (edit:Register)
-          ├── TweakA.psm1      --> (Light: OEM Debloat + Safe registry) ( edit: Reg/AppxPackage )
-          ├── TweakB.psm1      --> (Medium: Bloatware removal + Tweaks)(edit: Reg/AppX /task)
-          ├── TweakC.psm1      --> (Heavy:Agresivní 90+ balíčků - Expert only)(EAppx /task/services)
-          ├── TweakR.psm1      --> (Rollback: Obnova služeb do defaultu)/ (edit:services dle potřeby) 
-          ├── TweakV.psm1      --> (Legacy: Windows Photo Viewer restore)
+          │                 *  WINDOWS TWEAKS & DEBLOAT *
+          ├── Tweak0.psm1      -> (Safe: Pouze registry, bez mazání AppX) (edit:Register)
+          ├── TweakA.psm1      -> (Light: OEM Debloat + Safe registry) ( edit: Reg/AppxPackage )
+          ├── TweakB.psm1      -> (Medium: Bloatware removal + Tweaks)(edit: Reg/AppX /task)
+          ├── TweakC.psm1      -> (Heavy:Agresivní 90+ balíčků - Expert only)(EAppx /task/services)
+          ├── TweakR.psm1      -> (Rollback: Obnova služeb do defaultu)/ (edit:services dle potřeby) 
+          ├── TweakV.psm1      -> (Legacy: Windows Photo Viewer restore)
           │
-          │                          * HARDWARE OPTIMIZATION (GPU) *
-          ├── GPU.psm1                          --> (Univerzální GPU optimalizace)
-          ├── GPU_Advanced.psm1   --> (HAGS, MPO, ReBAR, Game Mode)
-          ├── GPU_NVIDIA.psm1        --> (NVIDIA Latency & Performance tweaks)
-          ├── GPU_AMD.psm1             --> (Radeon Performance & Stability)
-          ├── GPU_Intel.psm1              --> (Arc/UHD specific optimization)
+          │     .    * HARDWARE OPTIMIZATION (GPU) *
+          ├── GPU.psm1          -> (Univerzální GPU optimalizace)
+          ├── GPU_Advanced.psm1 -> (HAGS, MPO, ReBAR, Game Mode)
+          ├── GPU_NVIDIA.psm1   -> (NVIDIA Latency & Performance tweaks)
+          ├── GPU_AMD.psm1      -> (Radeon Performance & Stability)
+          ├── GPU_Intel.psm1    -> (Arc/UHD specific optimization)
           │
-          │                          *  GAMING & LOW LATENCY *
-          ├── System.psm1              --> (Win32Priority, HID Tuning, Mouse/KB Latency) (edit or add)
-          ├── Gaming.psm1             --> (IO Page Lock,Universal, if not use tweak0/C, Input Lag Fix)
-          ├── MMCSS.psm1              --> (Multimedia Class Scheduler & Affinity Audio/Game/Display)
-          ├── PowerPlan.psm1       --> (Ultimate Performance, Unpark Cores) ( edit:  JsonPlan)
-          ├── CoreParking.psm1    --> (Core Parking Access & Stability)  
+          │           * GAMING & LOW LATENCY *
+          ├── System.psm1       -> (Win32Priority, HID Tuning, Mouse/KB Latency) (edit or add)
+          ├── Gaming.psm1       -> (IO Page Lock,Universal, if not use tweak0/C, Input Lag Fix)
+          ├── MMCSS.psm1        -> (Multimedia Class Scheduler & Affinity Audio/Game/Display)
+          ├── PowerPlan.psm1    -> (Ultimate Performance, Unpark Cores) ( edit:  JsonPlan)
+          ├── CoreParking.psm1  -> (Core Parking Access & Stability)  
           │
-          │                          * SECURITY & NETWORK *
-          ├── Security.psm1               --> (Mitigace off: Spectre/Meltdown, VBS, Defender)
-          ├── RevertHazard.psm1    --> (Security Rollback)
-          ├── Telemetry.psm1            --> (Data collection block, HOSTS tuning)
-          ├── MEBlock.psm1              --> (Microsoft Edge IFEO/ACL Restriction)
-          ├── Network.psm1              --> (TCP/IP tuning, Nagle's Algorithm off, DNS)
+          │           * SECURITY & NETWORK *
+          ├── Security.psm1    -> (Mitigace off: Spectre/Meltdown, VBS, Defender)
+          ├── RevertHazard.psm1-> (Security Rollback)
+          ├── Telemetry.psm1   -> (Data collection block, HOSTS tuning)
+          ├── MEBlock.psm1     -> (Microsoft Edge IFEO/ACL Restriction)
+          ├── Network.psm1     -> (TCP/IP tuning, Nagle's Algorithm off, DNS)
           │
-          │                         * MAINTENANCE & REPAIR *
-          ├── Restore.psm1          --> (SFC, DISM, CHKDSK - Systémová integrita)
-          ├── Updates.psm1         --> (Windows Update Management)
-          ├── Utils.psm1                 --> (Pomocné operace pro zálohování)
-          ├── Data.psm1                --> (Univerzální  herní  konfigurace/Pomocné Gaming.psm1)
-          └── Diagnostics.psm1 --> (Crash dump analýza, HW Health Check)
+          │           * MAINTENANCE & REPAIR *
+          ├── Restore.psm1     -> (SFC, DISM, CHKDSK - Systémová integrita)
+          ├── Updates.psm1     -> (Windows Update Management)
+          ├── Utils.psm1       -> (Pomocné operace pro zálohování)
+          ├── Data.psm1        -> (Univerzální  herní  konfigurace/Pomocné Gaming.psm1)
+          └── Diagnostics.psm1 -> (Crash dump analýza, HW Health Check)
 ```
 Každý modul má zdrojový kód v [/Modules](https://github.com/KrakeCZ/Krake-FIX/tree/main/Modules).
 
-==================================================================         
+=====================================================   
 
 
 
@@ -136,7 +140,7 @@ Každý modul má zdrojový kód v [/Modules](https://github.com/KrakeCZ/Krake-F
 > - **MS Store obnova**: Instalace Xbox app z MS webu vyvolá závislost instalace MS Store! Odebral jsem odinstalaci MS Store, ale pokud potřebuješ – reinstaluj z webu MS Xbox app.
  
 > - ⚠️** HOSTS blokování **: Pokud použiješ HOSTS – Tvůj antivirus může falešně ohlasit tuto akci jako nebezpečnou! Důvod: Blokování Microsoft domén (a-msedge.net, activity.windows.com atd., a 0.0.0.0). Historicky populární metoda, ale v moderních Windows ji Defender detekuje jako SettingsModifier:Win32/HostsFileHijack. Doporučuji registry/služby místo HOSTS. Výchozí obsah HOSTS pro obnovu: (zde plný text výchozího HOSTS souboru).
- 
+=====================================================    
 ❗️ **Tento nástroj mění základní systémová nastavení!!!**  
 ❗️ **NE pro produkční systémy** - Pouze pro herní/testovací počítače.  
 ❗️ **Bezpečnostní funkce vypnuty** - Některé moduly vypínají Windows Defender, VBS, HVCI.  
@@ -148,19 +152,18 @@ Každý modul má zdrojový kód v [/Modules](https://github.com/KrakeCZ/Krake-F
 > - **⚡ POUŽÍVEJ NA VLASTNÍ RIZIKO ⚡** - Tento nástroj je určený pro: Herní PC (e-sports, competitive, casual), Testovací prostředí, Dual-boot systémy s testovacím OS, Pokročilé uživatele, kteří rozumí rizikům.
 >   
 > -⚠️❗️ **NENÍ doporučený pro:** Pracovní počítače, Systémy s citlivými daty, Sdílené/veřejné počítače, Systémy vyžadující maximální zabezpečení.❗️
->
+=====================================================   
 > - 👇💡
 > - **POZOR hPET**⏱️: Není vhodný pro moderní CPU!!! Pokud bude Win slowmo, dej zpět – nastavil si to v sekci 7!
 >   👆💡
->  ``` 
+>   
 > -BUG/chyba Terminal/ PowerShell
 > **Změňte condrv typ spouštění služby (pokročilí uživatele)**:
 > Chyba je často spojena s tím, že condrv se služba nespustí automaticky, když je potřeba. Otevřete Editor registru zadáním regedit vyhledávacího dotazu do nabídky Start a spuštěním jako správce.
 > -  Přejděte k následující klávese: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\condrv.
 > -  V pravém podokně vyhledejte Start položku. Dvakrát klikněte Start a změňte jeho hodnotu z 3 (manuální) na 2 (automatické).
 > -  Restartujte počítač, aby se změna projevila.
->  ```
-> 
+> -  
 Pokud Použiješ HOSTS -> Tvuj antivirus muze FALESNE ohlasit tuto akci jako nebezpecnou!
 Duvod: ## Blokování Microsoft domén
 <details>
@@ -246,8 +249,6 @@ wes.df.telemetry.microsoft.com
 ```
 </details>
 
- ```
-```
 ## Moduly
 Skript je modulární – všechny moduly jsou v [/Modules](https://github.com/KrakeCZ/Krake-FIX/tree/main/Modules). Zde je přehled:
 ```
@@ -283,6 +284,7 @@ Skript je modulární – všechny moduly jsou v [/Modules](https://github.com/K
 | Utils.psm1 | Pomocné funkce pro zálohovací operace.  |
 ```
 Celkem 28 modulů s 277+ tweaky. Každý modul má zdrojový kód v [/Modules](https://github.com/KrakeCZ/Krake-FIX/tree/main/Modules).
+=====================================================
 
 ## Systémové Požadavky
 - **OS**: Windows 10 (1903+) nebo Windows 11 (25H2+).  
@@ -312,14 +314,14 @@ Po použití vrať zpět: `Set-ExecutionPolicy -ExecutionPolicy Restricted -Scop
 Pro lokální skripty: `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine -Force`.
 
 3. **Spuštění**:  
-=====================================================================================================
+=====================================================
 - Zkopíruj `Main.ps1` a složku `Modules` na `C:\`.  
 - Spusť Terminál / Powershell jako Admin: `C:\.\Main.ps1`.  
 - Proveďaplikaci tweaku dle libosti Tweak0 jen registry atd.. 
-=====================================================================================================
+=====================================================
 
 4. **Příklady Aplikace Tweaks**:  
-=====================================================================================================
+=====================================================
 - [1] Obecné tweaky: Vyber variantu A/B/C.  
 - [2] GPU tweaky: Vyber podle výrobce (NVIDIA/AMD/Intel).  
 - [12] Síťové optimalizace: DNS, Nagle dle adaptéru, TCP/IP.  
@@ -327,10 +329,10 @@ Pro lokální skripty: `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope
 - [3] Win32PrioritySeparation: Esports/Gaming.  
 - [7] Security Hazard Tweaks: Heslo pro přístup.  
 - Po aplikaci **restartuj PC**.
-=====================================================================================================
+============================================================
 
 ## Obnova Změn
-=====================================================================================================
+===============================================================
 - **Rychlá Obnova**: Použij bod obnovy systému.  
 - V skriptu:  
 - [6] Obnovit bezpečné výchozí nastavení (Security [7]).  
@@ -340,8 +342,7 @@ Pro lokální skripty: `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope
 - Další: `RestoreOLD_Windows_Photo_Viewer_CURRENT_USER.reg` pro Photo Viewer.  
 - Pro condrv službu: Uprav registry HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\condrv, změň Start z 3 na 2.
 - 
-=====================================================================================================
-
+===========================================================================================
 ## FAQ
 ```
 - **Antivirus blokuje HOSTS?** Ano, falešný poplach kvůli blokaci MS domén. Přidej výjimku nebo dočasně vypni.  
@@ -473,5 +474,9 @@ SOFTWARE.
   <img src="Screenshots/shot031.png" width="400" alt="Screenshot 36"/>
   <img src="Screenshots/shot032.png" width="400" alt="Screenshot 37"/>
 </p>
+<p align="center">
+  <img src="Screenshots/shot033.png" width="400" alt="Screenshot 38"/>
+</p>
 
 ---
+ 👉🌐 https://krakecz.github.io/Krake-FIX/ 🌐👈
