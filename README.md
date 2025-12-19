@@ -56,7 +56,7 @@ Doporučení:
   
 ==================================================================
 # STRUKTURA
-  ```
+```
 KRAKE-FIX (Root)
 │
 ├──{ *** Execution Policy (Bypass required)***}
@@ -111,8 +111,9 @@ KRAKE-FIX (Root)
           ├── Utils.psm1                 --> (Pomocné operace pro zálohování)
           ├── Data.psm1                --> (Univerzální  herní  konfigurace/Pomocné Gaming.psm1)
           └── Diagnostics.psm1 --> (Crash dump analýza, HW Health Check)
-Každý modul má zdrojový kód v [/Modules](https://github.com/KrakeCZ/Krake-FIX/tree/main/Modules).
 ```
+Každý modul má zdrojový kód v [/Modules](https://github.com/KrakeCZ/Krake-FIX/tree/main/Modules).
+
 ==================================================================         
 
 
@@ -135,7 +136,7 @@ Každý modul má zdrojový kód v [/Modules](https://github.com/KrakeCZ/Krake-F
 > - **MS Store obnova**: Instalace Xbox app z MS webu vyvolá závislost instalace MS Store! Odebral jsem odinstalaci MS Store, ale pokud potřebuješ – reinstaluj z webu MS Xbox app.
  
 > - ⚠️** HOSTS blokování **: Pokud použiješ HOSTS – Tvůj antivirus může falešně ohlasit tuto akci jako nebezpečnou! Důvod: Blokování Microsoft domén (a-msedge.net, activity.windows.com atd., a 0.0.0.0). Historicky populární metoda, ale v moderních Windows ji Defender detekuje jako SettingsModifier:Win32/HostsFileHijack. Doporučuji registry/služby místo HOSTS. Výchozí obsah HOSTS pro obnovu: (zde plný text výchozího HOSTS souboru).
- ```
+ 
 ❗️ **Tento nástroj mění základní systémová nastavení!!!**  
 ❗️ **NE pro produkční systémy** - Pouze pro herní/testovací počítače.  
 ❗️ **Bezpečnostní funkce vypnuty** - Některé moduly vypínají Windows Defender, VBS, HVCI.  
@@ -143,23 +144,23 @@ Každý modul má zdrojový kód v [/Modules](https://github.com/KrakeCZ/Krake-F
 💡 **Vytvoř zálohy** - Vždy vytvořte bod obnovení systému před použitím.  
 ❗️ **Restart nutný** - Většina úprav vyžaduje restart PC.  
 ❗️ **Antivirus vypnutý** - Některé konfigurace vypínají ochranu v reálném čase viz security sekce! 
-```
+
 > - **⚡ POUŽÍVEJ NA VLASTNÍ RIZIKO ⚡** - Tento nástroj je určený pro: Herní PC (e-sports, competitive, casual), Testovací prostředí, Dual-boot systémy s testovacím OS, Pokročilé uživatele, kteří rozumí rizikům.
-> - 
+>   
 > -⚠️❗️ **NENÍ doporučený pro:** Pracovní počítače, Systémy s citlivými daty, Sdílené/veřejné počítače, Systémy vyžadující maximální zabezpečení.❗️
 >
 > - 👇💡
 > - **POZOR hPET**⏱️: Není vhodný pro moderní CPU!!! Pokud bude Win slowmo, dej zpět – nastavil si to v sekci 7!
 >   👆💡
->   
+>  ``` 
 > -BUG/chyba Terminal/ PowerShell
 > **Změňte condrv typ spouštění služby (pokročilí uživatele)**:
 > Chyba je často spojena s tím, že condrv se služba nespustí automaticky, když je potřeba. Otevřete Editor registru zadáním regedit vyhledávacího dotazu do nabídky Start a spuštěním jako správce.
 > -  Přejděte k následující klávese: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\condrv.
 > -  V pravém podokně vyhledejte Start položku. Dvakrát klikněte Start a změňte jeho hodnotu z 3 (manuální) na 2 (automatické).
 > -  Restartujte počítač, aby se změna projevila.
->
->  
+>  ```
+> 
 Pokud Použiješ HOSTS -> Tvuj antivirus muze FALESNE ohlasit tuto akci jako nebezpecnou!
 Duvod: ## Blokování Microsoft domén
 <details>
@@ -246,18 +247,6 @@ wes.df.telemetry.microsoft.com
 </details>
 
  ```
-> - **Tento nástroj mění základní systémová nastavení!!!**  
-> - **NE pro produkční systémy** - Pouze pro herní/testovací počítače.  
-> - **Bezpečnostní funkce vypnuty** - Některé moduly vypínají Windows Defender, VBS, HVCI.  
-> - **Změny systému** - Registry, služby, bcdedit operace, ACL změny.  
-> - **Vytvoř zálohy** - Vždy vytvořte bod obnovení systému před použitím.  
-> - **Restart nutný** - Většina úprav vyžaduje restart PC.  
-> - **Antivirus vypnutý** - Některé konfigurace vypínají ochranu v reálném čase viz security sekce!
-> - 
-> - **⚡ POUŽÍVEJ NA VLASTNÍ RIZIKO ⚡** - Tento nástroj je určený pro: Herní PC (e-sports, competitive, casual), Testovací prostředí, Dual-boot systémy s testovacím OS, Pokročilé uživatele, kteří rozumí rizikům.  
-> - **NENÍ doporučený pro:** Pracovní počítače, Systémy s citlivými daty, Sdílené/veřejné počítače, Systémy vyžadující maximální zabezpečení.  
-> - **POZOR hPET**: Není vhodný pro moderní CPU!!! Pokud bude Win slowmo, dej zpět – nastavil si to v sekci 7!  
-> - **Změňte condrv typ spouštění služby (pokročilí uživatele)**: Chyba je často spojena s tím, že condrv se služba nespustí automaticky, když je potřeba. Otevřete Editor registru zadáním regedit vyhledávacího dotazu do nabídky Start a spuštěním jako správce. Přejděte k následující klávese: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\condrv. V pravém podokně vyhledejte Start položku. Dvakrát klikněte Start a změňte jeho hodnotu z 3 (manuální) na 2 (automatické). Restartujte počítač, aby se změna projevila.
 ```
 ## Moduly
 Skript je modulární – všechny moduly jsou v [/Modules](https://github.com/KrakeCZ/Krake-FIX/tree/main/Modules). Zde je přehled:
