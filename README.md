@@ -8,23 +8,23 @@
 [![PowerShell 5.1+](https://img.shields.io/badge/PowerShell-5.1%2B-blue.svg)](https://learn.microsoft.com/en-us/powershell/)
 [![Windows 10/11](https://img.shields.io/badge/Windows-10%2F11-green.svg)](https://www.microsoft.com/en-us/windows)
 [![GitHub Issues](https://img.shields.io/github/issues/KrakeCZ/Krake-FIX.svg)](https://github.com/KrakeCZ/Krake-FIX/issues)
-=============================================================
+============================================================
 **Krake-FIX** je expertní skript určený pro agresivní debloat a optimalizaci systému Windows. Je navržen specificky pro pokročilé uživatele, administrátory připravující referenční image, nebo pro nasazení na specializovaných herních (esports) stanicích, kde je vyžadována minimalizace systémových procesů a dosažení maximálního výkonu s minimální latencí.
 
 Ultimátní optimalizační toolkit pro Windows zaměřený na kompetitivní hraní, minimální latenci a konzistentní FPS. Tento nástroj je navržen pro maximální výkon na herních a testovacích stanicích. 
-=============================================================
+============================================================
 > -  👉🌐 https://krakecz.github.io/Krake-FIX/ 🌐👈
  
 > - ## ⚠️❗️ Upozornění na PsExec (Microsoft Sysinternals)⚠️❗️
 
-> - Krake-FIX obsahuje soubor psexec64.exe — jedná se o oficiální nástroj z Microsoft Sysinternals.
+> - Krake-FIX 🚀 obsahuje soubor psexec64.exe 👈 jedná se o oficiální nástroj z Microsoft Sysinternals.
 - Originál stáhní:👉🌐 https://learn.microsoft.com/cs-cz/sysinternals/downloads/psexec ❗️
 - instalace kopiruj pouze "psexec64.exe" z balíku SysInternals z webu Microsoft ! do > /Modules/Bin/PsExec/Psexec64.exe 
 
 > - Některé antiviry a služby (např. VirusTotal) mohou PsExec označit jako „HackTool“.
 > - Jde o běžnou heuristiku u nástrojů s vyššími oprávněními; neznamená to automaticky, že je Krake-FIX škodlivý.
 
-> - Krake-FIX používá Psexec64.exe výhradně k získání oprávnění TrustedInstaller a k provedení systémových úkonů (správa služeb, úloh,WinUpdate, aplikace konfigurací).
+> ⚠️ Krake-FIX používá Psexec64.exe výhradně k získání oprávnění TrustedInstaller a k provedení systémových úkonů (správa služeb, úloh,WinUpdate, aplikace konfigurací).
 > -  Bez této elevace nelze získat potřebný token(oprávnění Ntsystem TrustedInstaller).
 
 > - Pokud jste Krake-FIX stáhli z oficiálního GitHub repozitáře, jsou tato upozornění očekávatelná. 
@@ -41,7 +41,7 @@ Doporučení:
 > -  Tento nástroj je určený pro: Herní PC (e-sports, competitive, casual), Testovací prostředí, Dual-boot systémy s testovacím OS, Pokročilé uživatele, kteří rozumí rizikům.
 > - ⚠️❗️ **NENÍ doporučený pro:** ⚠️❗️
 > -  ❗️🛡️ Pracovní počítače, Systémy s citlivými daty, Sdílené/veřejné počítače, Systémy vyžadující maximální zabezpečení.❗️
-> -  =====================================================================================================
+> -  ====================================================================================================
 
 ## Funkce
 - **🎮 Herní optimalizace**: Snížení input lagu, stabilní nebo zvýšení FPS, optimalizace CPU/GPU.  
@@ -50,11 +50,11 @@ Doporučení:
 - **🔒 Kontrola soukromí**: Vypnutí trackingu, telemetrie, kontrola Windows Update.  
 - **⚡ Zvýšení výkonu**: H.I.D,W32Prio,FSutil, MMCSS ladění, optimalizace paměti.  
 - **🛡️ Bezpečnostní možnosti**: CPU mitigace OFF/on, Kontrola VBS/HVCI, správa Defenderu, LSA, TSX Protection,Hpet.
-- 
+  
 <p align="center">
   <img src="Screenshots/shot001.png" width="400" alt="Screenshot 5"/>
 
-=====================================================================================================
+====================================================================================================
 # STRUKTURA
 ```
 KRAKE-FIX (Root)
@@ -75,7 +75,7 @@ KRAKE-FIX (Root)
           ├── PreTweak.ps1     --> (Validace závislostí: PsExec, LanmanServer pro TweakR)
           │
           │          * ((MODULY: jdou jednoduše uživatelsky upravit))*
-          │
+          │ 
           │                          *  WINDOWS TWEAKS & DEBLOAT *
           ├── Tweak0.psm1      --> (Safe: Pouze registry, bez mazání AppX) (edit:Register)
           ├── TweakA.psm1      --> (Light: OEM Debloat + Safe registry) ( edit: Reg/AppxPackage )
@@ -111,50 +111,57 @@ KRAKE-FIX (Root)
           ├── Utils.psm1                 --> (Pomocné operace pro zálohování)
           ├── Data.psm1                --> (Univerzální  herní  konfigurace/Pomocné Gaming.psm1)
           └── Diagnostics.psm1 --> (Crash dump analýza, HW Health Check)
+
+Každý modul má zdrojový kód v [/Modules](https://github.com/KrakeCZ/Krake-FIX/tree/main/Modules).
 ```
           
 
-=====================================================================================================
+====================================================================================================
 
 
     
 > **⚠️ DŮLEŽITÁ VAROVÁNÍ**  
 > Tento nástroj provádí hloubkové změny v konfiguraci systému Windows.
 > Je určen výhradně pro expertní uživatele na osobních (herních/testovacích) počítačích.
-> 
+ 
 > - **VYPÍNÁ BEZPEČNOST**: Modul Security (chráněný heslem) je navržen tak, aby vypnul systémové ochrany jako CPU Mitigace (Spectre/Meltdown), VBS, HVCI (Integrita jádra), LSA Protection. Defender , Aktualizace... 
-> - 
+ 
 > - **AGRESIVNÍ DEBLOAT**: Režim Tweak C trvale odstraní základní systémové aplikace, včetně Xbox aplikací, Kalkulačky a Fotek (využij [RestoreOLD_Windows_Photo_Viewer_CURRENT_USER.reg](RestoreOLD_Windows_Photo_Viewer_CURRENT_USER.reg) pro obnovu Photo Vieweru).
-> - 
+ 
 > - **BLOKACE SYSTÉMU**: Modul MEBlock (Microsoft Edge Block) používá ACL zámky k zakázání (DENY) přístupu pro SYSTEM a TrustedInstaller, aby se zabránilo automatické opravě Edge.
-> - 
+ 
 > - **VYTVOŘTE ZÁLOHU**: Před použitím vždy vytvořte bod obnovení systému nebo kompletní bitovou kopii disku. Ideálně vytvoření bootovacího USB klíče s Acronis True Image 2021. Práce pro RUFUS.
-> - 
+ 
 > - **POUŽÍVÁTE NA VLASTNÍ RIZIKO**: Autor nenese žádnou odpovědnost za ztrátu dat nebo poškození systému.  
 > - **MS Store obnova**: Instalace Xbox app z MS webu vyvolá závislost instalace MS Store! Odebral jsem odinstalaci MS Store, ale pokud potřebuješ – reinstaluj z webu MS Xbox app.
-> - 
-> - **HOSTS blokování**: Pokud použiješ HOSTS – Tvůj antivirus může falešně ohlasit tuto akci jako nebezpečnou! Důvod: Blokování Microsoft domén (a-msedge.net, activity.windows.com atd., a 0.0.0.0). Historicky populární metoda, ale v moderních Windows ji Defender detekuje jako SettingsModifier:Win32/HostsFileHijack. Doporučuji registry/služby místo HOSTS. Výchozí obsah HOSTS pro obnovu: (zde plný text výchozího HOSTS souboru).
+ 
+> - ⚠️** HOSTS blokování **: Pokud použiješ HOSTS – Tvůj antivirus může falešně ohlasit tuto akci jako nebezpečnou! Důvod: Blokování Microsoft domén (a-msedge.net, activity.windows.com atd., a 0.0.0.0). Historicky populární metoda, ale v moderních Windows ji Defender detekuje jako SettingsModifier:Win32/HostsFileHijack. Doporučuji registry/služby místo HOSTS. Výchozí obsah HOSTS pro obnovu: (zde plný text výchozího HOSTS souboru).
  ```
-> - **Tento nástroj mění základní systémová nastavení!!!**  
-> - **NE pro produkční systémy** - Pouze pro herní/testovací počítače.  
-> - **Bezpečnostní funkce vypnuty** - Některé moduly vypínají Windows Defender, VBS, HVCI.  
-> - **Změny systému** - Registry, služby, bcdedit operace, ACL změny.  
-> - **Vytvoř zálohy** - Vždy vytvořte bod obnovení systému před použitím.  
-> - **Restart nutný** - Většina úprav vyžaduje restart PC.  
-> - **Antivirus vypnutý** - Některé konfigurace vypínají ochranu v reálném čase viz security sekce! 
+❗️ **Tento nástroj mění základní systémová nastavení!!!**  
+❗️ **NE pro produkční systémy** - Pouze pro herní/testovací počítače.  
+❗️ **Bezpečnostní funkce vypnuty** - Některé moduly vypínají Windows Defender, VBS, HVCI.  
+❗️ **Změny systému** - Registry, služby, bcdedit operace, ACL změny.  
+💡 **Vytvoř zálohy** - Vždy vytvořte bod obnovení systému před použitím.  
+❗️ **Restart nutný** - Většina úprav vyžaduje restart PC.  
+❗️ **Antivirus vypnutý** - Některé konfigurace vypínají ochranu v reálném čase viz security sekce! 
 ```
 > - **⚡ POUŽÍVEJ NA VLASTNÍ RIZIKO ⚡** - Tento nástroj je určený pro: Herní PC (e-sports, competitive, casual), Testovací prostředí, Dual-boot systémy s testovacím OS, Pokročilé uživatele, kteří rozumí rizikům.
 > - 
 > -⚠️❗️ **NENÍ doporučený pro:** Pracovní počítače, Systémy s citlivými daty, Sdílené/veřejné počítače, Systémy vyžadující maximální zabezpečení.❗️
 >
-> - 
-> - **POZOR hPET**: Není vhodný pro moderní CPU!!! Pokud bude Win slowmo, dej zpět – nastavil si to v sekci 7!
-> - 
-> - **Změňte condrv typ spouštění služby (pokročilí uživatele)**: Chyba je často spojena s tím, že condrv se služba nespustí automaticky, když je potřeba. Otevřete Editor registru zadáním regedit vyhledávacího dotazu do nabídky Start a spuštěním jako správce.
-> -  Přejděte k následující klávese: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\condrv. V pravém podokně vyhledejte Start položku. Dvakrát klikněte Start a změňte jeho hodnotu z 3 (manuální) na 2 (automatické). Restartujte počítač, aby se změna projevila.
-
-- 
-Pokud Použiješ HOSTS - Tvuj antivirus muze FALESNE ohlasit tuto akci jako nebezpecnou!
+> - 👇💡
+> - **POZOR hPET**⏱️: Není vhodný pro moderní CPU!!! Pokud bude Win slowmo, dej zpět – nastavil si to v sekci 7!
+>   👆💡
+>   
+> -BUG/chyba Terminal/ PowerShell
+> **Změňte condrv typ spouštění služby (pokročilí uživatele)**:
+> Chyba je často spojena s tím, že condrv se služba nespustí automaticky, když je potřeba. Otevřete Editor registru zadáním regedit vyhledávacího dotazu do nabídky Start a spuštěním jako správce.
+> -  Přejděte k následující klávese: HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\condrv.
+> -  V pravém podokně vyhledejte Start položku. Dvakrát klikněte Start a změňte jeho hodnotu z 3 (manuální) na 2 (automatické).
+> -  Restartujte počítač, aby se změna projevila.
+>
+>  
+Pokud Použiješ HOSTS -> Tvuj antivirus muze FALESNE ohlasit tuto akci jako nebezpecnou!
 Duvod: ## Blokování Microsoft domén
 <details>
 <summary>Klikněte pro zobrazení seznamu 40+ Microsoft domén blokovaných v HOSTS file</summary>
@@ -258,7 +265,6 @@ Skript je modulární – všechny moduly jsou v [/Modules](https://github.com/K
 ```
 | Modul Název | Popis |
 |-------------|-------|
-
 | Core.psm1 | Základní knihovna funkcí, oprávnění, logování. |
 | CoreParking.psm1 | Zpřístupnění nabídky parkování jader v plánu napajení |
 | Data.psm1 | Centrálni knihovna  pro systemová nastavení Gamming modulu. |
