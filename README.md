@@ -55,9 +55,8 @@ Doporučení:
   <img src="Screenshots/shot001.png" width="400" alt="Screenshot 5"/>
 
 =================================================================================================================
->-# STRUKTURA
+# STRUKTURA
 ```mermaid
-graph TD
 KRAKE-FIX (Root)
 │
 ├──{ *** Execution Policy (Bypass required)***}
