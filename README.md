@@ -54,7 +54,68 @@ Doporučení:
 <p align="center">
   <img src="Screenshots/shot001.png" width="400" alt="Screenshot 5"/>
 
-=============================================================
+=================================================================================================================
+>-# STRUKTURA 
+KRAKE-FIX (Root)
+│
+├──{ *** Execution Policy (Bypass required)***}
+│
+├── Main.ps1 (Spouštěcí soubor )
+│
+└>[ Modules/ ]  (Funkce a  Core,)  
+          │
+          ├──> [ Bin/ (Externí binární exekutory)
+          │              └ [PsExec/]
+          │                     ├──> PsExec64.exe  --> (Klíčový nástroj pro TrustedInstaller elevaci)
+          │                     └── PSEXEC64 info.txt      --> (Dokumentace k  původu)
+          │             
+          │                         *  CORE & SYSTEM INFRASTRUCTURE *
+          ├── Core.psm1        --> (Knihovna funkcí, oprávnění, logování) 
+          ├── PreTweak.ps1     --> (Validace závislostí: PsExec, LanmanServer pro TweakR)
+          │
+          │          * ((MODULY: jdou jednoduše uživatelsky upravit))*
+          │
+          │                          *  WINDOWS TWEAKS & DEBLOAT *
+          ├── Tweak0.psm1      --> (Safe: Pouze registry, bez mazání AppX) (edit:Register)
+          ├── TweakA.psm1      --> (Light: OEM Debloat + Safe registry) ( edit: Reg/AppxPackage )
+          ├── TweakB.psm1      --> (Medium: Bloatware removal + Tweaks)(edit: Reg/AppX /task)
+          ├── TweakC.psm1      --> (Heavy:Agresivní 90+ balíčků - Expert only)(EAppx /task/services)
+          ├── TweakR.psm1      --> (Rollback: Obnova služeb do defaultu)/ (edit:services dle potřeby) 
+          ├── TweakV.psm1      --> (Legacy: Windows Photo Viewer restore)
+          │
+          │                          * HARDWARE OPTIMIZATION (GPU) *
+          ├── GPU.psm1                          --> (Univerzální GPU optimalizace)
+          ├── GPU_Advanced.psm1   --> (HAGS, MPO, ReBAR, Game Mode)
+          ├── GPU_NVIDIA.psm1        --> (NVIDIA Latency & Performance tweaks)
+          ├── GPU_AMD.psm1             --> (Radeon Performance & Stability)
+          ├── GPU_Intel.psm1              --> (Arc/UHD specific optimization)
+          │
+          │                          *  GAMING & LOW LATENCY *
+          ├── System.psm1              --> (Win32Priority, HID Tuning, Mouse/KB Latency) (edit or add)
+          ├── Gaming.psm1             --> (IO Page Lock,Universal, if not use tweak0/C, Input Lag Fix)
+          ├── MMCSS.psm1              --> (Multimedia Class Scheduler & Affinity Audio/Game/Display)
+          ├── PowerPlan.psm1       --> (Ultimate Performance, Unpark Cores) ( edit:  JsonPlan)
+          ├── CoreParking.psm1    --> (Core Parking Access & Stability)  
+          │
+          │                          * SECURITY & NETWORK *
+          ├── Security.psm1               --> (Mitigace off: Spectre/Meltdown, VBS, Defender)
+          ├── RevertHazard.psm1    --> (Security Rollback)
+          ├── Telemetry.psm1            --> (Data collection block, HOSTS tuning)
+          ├── MEBlock.psm1              --> (Microsoft Edge IFEO/ACL Restriction)
+          ├── Network.psm1              --> (TCP/IP tuning, Nagle's Algorithm off, DNS)
+          │
+          │                         * MAINTENANCE & REPAIR *
+          ├── Restore.psm1          --> (SFC, DISM, CHKDSK - Systémová integrita)
+          ├── Updates.psm1         --> (Windows Update Management)
+          ├── Utils.psm1                 --> (Pomocné operace pro zálohování)
+          ├── Data.psm1                --> (Univerzální  herní  konfigurace/Pomocné Gaming.psm1)
+          └── Diagnostics.psm1 --> (Crash dump analýza, HW Health Check)
+          
+
+=================================================================================================================
+
+
+    
 > **⚠️ DŮLEŽITÁ VAROVÁNÍ**  
 > Tento nástroj provádí hloubkové změny v konfiguraci systému Windows.
 > Je určen výhradně pro expertní uživatele na osobních (herních/testovacích) počítačích.
