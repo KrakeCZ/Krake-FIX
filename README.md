@@ -41,7 +41,7 @@ Doporučení:
 > -  Tento nástroj je určený pro: Herní PC (e-sports, competitive, casual), Testovací prostředí, Dual-boot systémy s testovacím OS, Pokročilé uživatele, kteří rozumí rizikům.
 > - ⚠️❗️ **NENÍ doporučený pro:** ⚠️❗️
 > -  ❗️🛡️ Pracovní počítače, Systémy s citlivými daty, Sdílené/veřejné počítače, Systémy vyžadující maximální zabezpečení.❗️
-> -  ====================================================================================================
+> -==================================================================
 
 ## Funkce
 - **🎮 Herní optimalizace**: Snížení input lagu, stabilní nebo zvýšení FPS, optimalizace CPU/GPU.  
@@ -53,10 +53,10 @@ Doporučení:
   
 <p align="center">
   <img src="Screenshots/shot001.png" width="400" alt="Screenshot 5"/>
-
-====================================================================================================
+  
+==================================================================
 # STRUKTURA
-```
+  ```
 KRAKE-FIX (Root)
 │
 ├──{ *** Execution Policy (Bypass required)***}
@@ -111,12 +111,11 @@ KRAKE-FIX (Root)
           ├── Utils.psm1                 --> (Pomocné operace pro zálohování)
           ├── Data.psm1                --> (Univerzální  herní  konfigurace/Pomocné Gaming.psm1)
           └── Diagnostics.psm1 --> (Crash dump analýza, HW Health Check)
-
 Každý modul má zdrojový kód v [/Modules](https://github.com/KrakeCZ/Krake-FIX/tree/main/Modules).
 ```
-          
+==================================================================         
 
-====================================================================================================
+
 
 
     
