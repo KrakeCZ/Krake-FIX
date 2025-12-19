@@ -41,7 +41,7 @@ Doporučení:
 > -  Tento nástroj je určený pro: Herní PC (e-sports, competitive, casual), Testovací prostředí, Dual-boot systémy s testovacím OS, Pokročilé uživatele, kteří rozumí rizikům.
 > - ⚠️❗️ **NENÍ doporučený pro:** ⚠️❗️
 > -  ❗️🛡️ Pracovní počítače, Systémy s citlivými daty, Sdílené/veřejné počítače, Systémy vyžadující maximální zabezpečení.❗️
-=============================================================
+> -  =====================================================================================================
 
 ## Funkce
 - **🎮 Herní optimalizace**: Snížení input lagu, stabilní nebo zvýšení FPS, optimalizace CPU/GPU.  
@@ -54,7 +54,7 @@ Doporučení:
 <p align="center">
   <img src="Screenshots/shot001.png" width="400" alt="Screenshot 5"/>
 
-=========================================================================================================
+=====================================================================================================
 # STRUKTURA
 ```
 KRAKE-FIX (Root)
@@ -114,7 +114,7 @@ KRAKE-FIX (Root)
 ```
           
 
-=========================================================================================================
+=====================================================================================================
 
 
     
@@ -134,7 +134,7 @@ KRAKE-FIX (Root)
 > - **MS Store obnova**: Instalace Xbox app z MS webu vyvolá závislost instalace MS Store! Odebral jsem odinstalaci MS Store, ale pokud potřebuješ – reinstaluj z webu MS Xbox app.
 > - 
 > - **HOSTS blokování**: Pokud použiješ HOSTS – Tvůj antivirus může falešně ohlasit tuto akci jako nebezpečnou! Důvod: Blokování Microsoft domén (a-msedge.net, activity.windows.com atd., a 0.0.0.0). Historicky populární metoda, ale v moderních Windows ji Defender detekuje jako SettingsModifier:Win32/HostsFileHijack. Doporučuji registry/služby místo HOSTS. Výchozí obsah HOSTS pro obnovu: (zde plný text výchozího HOSTS souboru).
-> - 
+ ```
 > - **Tento nástroj mění základní systémová nastavení!!!**  
 > - **NE pro produkční systémy** - Pouze pro herní/testovací počítače.  
 > - **Bezpečnostní funkce vypnuty** - Některé moduly vypínají Windows Defender, VBS, HVCI.  
@@ -142,7 +142,7 @@ KRAKE-FIX (Root)
 > - **Vytvoř zálohy** - Vždy vytvořte bod obnovení systému před použitím.  
 > - **Restart nutný** - Většina úprav vyžaduje restart PC.  
 > - **Antivirus vypnutý** - Některé konfigurace vypínají ochranu v reálném čase viz security sekce! 
-> - 
+```
 > - **⚡ POUŽÍVEJ NA VLASTNÍ RIZIKO ⚡** - Tento nástroj je určený pro: Herní PC (e-sports, competitive, casual), Testovací prostředí, Dual-boot systémy s testovacím OS, Pokročilé uživatele, kteří rozumí rizikům.
 > - 
 > -⚠️❗️ **NENÍ doporučený pro:** Pracovní počítače, Systémy s citlivými daty, Sdílené/veřejné počítače, Systémy vyžadující maximální zabezpečení.❗️
@@ -318,14 +318,14 @@ Po použití vrať zpět: `Set-ExecutionPolicy -ExecutionPolicy Restricted -Scop
 Pro lokální skripty: `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine -Force`.
 
 3. **Spuštění**:  
-=============================================================
+=====================================================================================================
 - Zkopíruj `Main.ps1` a složku `Modules` na `C:\`.  
 - Spusť Terminál / Powershell jako Admin: `C:\.\Main.ps1`.  
 - Proveďaplikaci tweaku dle libosti Tweak0 jen registry atd.. 
-=============================================================
+=====================================================================================================
 
 4. **Příklady Aplikace Tweaks**:  
-=============================================================
+=====================================================================================================
 - [1] Obecné tweaky: Vyber variantu A/B/C.  
 - [2] GPU tweaky: Vyber podle výrobce (NVIDIA/AMD/Intel).  
 - [12] Síťové optimalizace: DNS, Nagle dle adaptéru, TCP/IP.  
@@ -333,10 +333,10 @@ Pro lokální skripty: `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope
 - [3] Win32PrioritySeparation: Esports/Gaming.  
 - [7] Security Hazard Tweaks: Heslo pro přístup.  
 - Po aplikaci **restartuj PC**.
-=============================================================
+=====================================================================================================
 
 ## Obnova Změn
-=============================================================
+=====================================================================================================
 - **Rychlá Obnova**: Použij bod obnovy systému.  
 - V skriptu:  
 - [6] Obnovit bezpečné výchozí nastavení (Security [7]).  
@@ -345,7 +345,8 @@ Pro lokální skripty: `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope
 - [16] → [R] Odblokování Edge (ACL unlock).  
 - Další: `RestoreOLD_Windows_Photo_Viewer_CURRENT_USER.reg` pro Photo Viewer.  
 - Pro condrv službu: Uprav registry HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\condrv, změň Start z 3 na 2.
-=============================================================
+- 
+=====================================================================================================
 
 ## FAQ
 ```
