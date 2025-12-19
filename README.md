@@ -134,12 +134,11 @@ Každý modul má zdrojový kód v [/Modules](https://github.com/KrakeCZ/Krake-F
  
 > - **BLOKACE SYSTÉMU**: Modul MEBlock (Microsoft Edge Block) používá ACL zámky k zakázání (DENY) přístupu pro SYSTEM a TrustedInstaller, aby se zabránilo automatické opravě Edge.
  
-> - **VYTVOŘTE ZÁLOHU**: Před použitím vždy vytvořte bod obnovení systému nebo kompletní bitovou kopii disku. Ideálně vytvoření bootovacího USB klíče s Acronis True Image 2021. Práce pro RUFUS.
- Vytvořte bod obnovy/ Bitovou kopii/ Klon disku. např. Acronis True Image2021 pozor 690MB! </p>
+> - **VYTVOŘTE ZÁLOHU**: Před použitím vždy vytvořte bod obnovení systému nebo kompletní bitovou kopii disku. Ideálně vytvoření bootovacího USB klíče s Acronis True Image 2021 690mb ke stažení 👇 Práce pro RUFUS liveUSB.. 
    👉🌐<a href="https://dl.acronis.com/u/AcronisTrueImage2021.iso">https://dl.acronis.com/u/AcronisTrueImage2021.iso</a>
    
 > - **POUŽÍVÁTE NA VLASTNÍ RIZIKO**: Autor nenese žádnou odpovědnost za ztrátu dat nebo poškození systému.  
-> - **MS Store obnova**: Instalace Xbox app z MS webu vyvolá závislost instalace MS Store! Odebral jsem odinstalaci MS Store, ale pokud potřebuješ – reinstaluj z webu MS Xbox app.
+> - **MS Store obnova**: Instalace Xbox app z MS webu vyvolá závislost instalace MS Store! Odebral jsem odinstalaci MS Store, ale pokud potřebuješ, edituj tweakC (přidej název Packages) , pak v případě potřeby – reinstaluj z webu MS Xbox app.
  
 > - ⚠️** HOSTS blokování **: Pokud použiješ HOSTS – Tvůj antivirus může falešně ohlasit tuto akci jako nebezpečnou! Důvod: Blokování Microsoft domén (a-msedge.net, activity.windows.com atd., a 0.0.0.0). Historicky populární metoda, ale v moderních Windows ji Defender detekuje jako SettingsModifier:Win32/HostsFileHijack. Doporučuji registry/služby místo HOSTS. Výchozí obsah HOSTS pro obnovu: (zde plný text výchozího HOSTS souboru).
 =====================================================    
@@ -474,10 +473,7 @@ SOFTWARE.
 
 <p align="center">
   <img src="Screenshots/shot031.png" width="400" alt="Screenshot 36"/>
-  <img src="Screenshots/shot033.png" width="400" alt="Screenshot 37"/>
-</p>
-<p align="center">
-  <img src="Screenshots/shot032.png" width="400" alt="Screenshot 38"/>
+  <img src="Screenshots/shot032.png" width="400" alt="Screenshot 37"/>
 </p>
 
 ---
