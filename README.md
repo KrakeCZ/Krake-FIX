@@ -52,7 +52,7 @@ Doporučení:
 - **🗑️ Windows debloating**: Odstranění bloatwaru, vypnutí telemetrie, čištění AppX balíčků.  
 - **🌐 Síťové úpravy**: TCP/IP optimalizace, konfigurace DNS, ladění Nagle algoritmu.  
 - **🔒 Kontrola soukromí**: Vypnutí trackingu, telemetrie, kontrola Windows Update.  
-- **⚡ Zvýšení výkonu**: H.I.D,W32Prio,FSutil, MMCSS ladění, optimalizace paměti.  
+- **⚡ Zvýšení výkonu**: H.I.D,W32Prio,FSutil, MMCSS ladění, optimalizace paměti a disku.  
 - **🛡️ Bezpečnostní možnosti**: CPU mitigace OFF/on, Kontrola VBS/HVCI, správa Defenderu, LSA, TSX Protection,Hpet.
       
 <p align="center">
@@ -87,6 +87,8 @@ KRAKE-FIX (Root)
           ├── TweakC.psm1      -> (Heavy:Agresivní 90+ balíčků - Expert only)(EAppx /task/services)
           ├── TweakR.psm1      -> (Rollback: Obnova služeb do defaultu)/ (edit:services dle potřeby) 
           ├── TweakV.psm1      -> (Legacy: Windows Photo Viewer restore)
+          ├── TweakT.psm1      -> (RollBack Task / úloh dle C / B )
+          ├── TweakD.psm1      -> (Disk Optim Nvme Redistry + FSutil )
           │
           │     .    * HARDWARE OPTIMIZATION (GPU) *
           ├── GPU.psm1          -> (Univerzální GPU optimalizace)
@@ -275,10 +277,12 @@ Skript je modulární – všechny moduly jsou v [/Modules](https://github.com/K
 | Security.psm1 | Vypnutí Spectre/Meltdown, TSX/LSA, VBS, Hyper-V, Defender, WinUpdate |
 | Telemetrie.psm1 | Blokace sběru dat a diagnostiky (HOSTS). |
 | Tweak0.psm1 | Tweak pouze  registry bez mazání app. |
+| TweakD.psm1 | Optimalizace NVMe + SSD samostatně  |
 | TweakA.psm1 | Debloat úrovně (light), registry tweaks, OEM mazání app. |
 | TweakB.psm1 | Debloat úrovně (medium), registry tweaks, OEM+BLOAT mazání app. |
 | TweakC.psm1 | Debloat úrovně (heavy), registry tweaks,OEM+90 bez mazání app. možno přidat vlastní packages |
 | TweakV.psm1 | Obnovení starého Windows Photo Vieweru. |
+| TweakT.psm1 | Obnova Úloh / Task dle Tweak C   obnovi i z B  |
 | TweakR.psm1 | Obnova služeb do výchozího stavu/Obsahuje všechny služby-jednoduše si uprav jak chceš|
 | System.psm1 | Win32PrioritySeparation, optimalizace HID klávesnice/myši. |
 | Updates.psm1 | Správa Windows Update (vypnutí/zapnutí/přizpůsobení). |
@@ -475,6 +479,11 @@ SOFTWARE.
   <img src="Screenshots/shot031.png" width="400" alt="Screenshot 36"/>
   <img src="Screenshots/shot032.png" width="400" alt="Screenshot 37"/>
 </p>
+
+<p align="center">
+  <img src="Screenshots/shot034.png" width="400" alt="Screenshot 38"/>
+</p>
+
 
 ---
  👉🌐 https://krakecz.github.io/Krake-FIX/ 🌐👈
