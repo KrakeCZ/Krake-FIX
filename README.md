@@ -350,6 +350,11 @@ Pro lokální skripty: `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope
 ===========================================================================================
 ## FAQ
 ```
+- **Plánovač Úloh** - Některé Win10/11 sestavení- mohou u win update disable VYPNOUT Planovač úloh-
+- FIX-CMD jako spravce :
+ sc config Schedule start= auto
+reg add "HKLM\SYSTEM\CurrentControlSet\Services\Schedule" /v Start /t REG_DWORD /d 2 /f
+
 - **Antivirus blokuje HOSTS?** Ano, falešný poplach kvůli blokaci MS domén. Přidej výjimku nebo dočasně vypni.  
 - **Chyba s `condrv` službou?** Spusť [Restore_Pt] pro opravu.  
 - **Proč vypnout Defender?** Pro nulovou latenci v hrách – ale jen na izolovaném PC!  
