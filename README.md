@@ -15,8 +15,8 @@ Ultimátní optimalizační toolkit pro Windows zaměřený na kompetitivní hra
 ============================================================
 > -  👉🌐 https://krakecz.github.io/Krake-FIX/ 🌐👈
 >
-> -  info📚 : https://notebooklm.google.com/notebook/e9f6f421-47e4-4839-80e6-b5ccae4149bb 👈
- 
+> -  info📚 : https://notebooklm.google.com/notebook/ba851e64-554f-485c-9f75-389f3b6cb46b  👈👀📚
+> -  
 > - ## ⚠️❗️ Upozornění na PsExec (Microsoft Sysinternals)⚠️❗️
 
 > - Krake-FIX 🚀 obsahuje soubor psexec64.exe 👈 jedná se o oficiální nástroj z Microsoft Sysinternals.
