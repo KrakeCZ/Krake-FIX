@@ -14,6 +14,8 @@
 Ultimátní optimalizační toolkit pro Windows zaměřený na kompetitivní hraní, minimální latenci a konzistentní FPS. Tento nástroj je navržen pro maximální výkon na herních a testovacích stanicích. 
 ============================================================
 > -  👉🌐 https://krakecz.github.io/Krake-FIX/ 🌐👈
+>
+> -  info📚 : https://notebooklm.google.com/notebook/e9f6f421-47e4-4839-80e6-b5ccae4149bb 👈
  
 > - ## ⚠️❗️ Upozornění na PsExec (Microsoft Sysinternals)⚠️❗️
 
