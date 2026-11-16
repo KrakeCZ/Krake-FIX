@@ -247,6 +247,7 @@ function Show-MainMenu {
         Write-Host "[16] 🗑️  Microsoft Edge Blockade (Registry/IFEO/ACL)" -ForegroundColor Magenta
         Write-Host "[17] 🎮 GAME + AUDIO Priority (MMCSS Profily)" -ForegroundColor Cyan
         Write-Host "[18] 💾 Disk BOOST - NVMe/SSD  (Registry Nvme + FeatureM + Fsutil)" -ForegroundColor Cyan
+        Write-Host "[19] 🔐 ACL správa a reset oprávnění (icacls)" -ForegroundColor Magenta
         Write-Host "--------------------------------------------------"
         Write-Host "[b] 🚀 BackgroundProcessEliminator (Export na plochu)" -ForegroundColor Green
         Write-Host "--------------------------------------------------"
@@ -507,9 +508,21 @@ function Show-MainMenu {
                     }
                 }
             }
-            'b' {
-                $desktopPath = [System.IO.Path]::Combine([System.Environment]::GetFolderPath('Desktop'), "BPE.bat")
-                $bpeContent = @"
+
+            '19' {
+            if (-not (Invoke-ModuleEntryPoint -ModuleName 'ACL')) {
+                if (Get-Command Show-AclMainMenu -ErrorAction SilentlyContinue) {
+                     Show-AclMainMenu
+                }
+                else {
+                    Write-Warning "ACL.psm1 není načten."
+                    Start-Sleep -Seconds 2
+                }
+            }
+        }
+        'b' {
+            $desktopPath = [System.IO.Path]::Combine([System.Environment]::GetFolderPath('Desktop'), "BPE.bat")
+            $bpeContent = @"
 @echo off
 title Kill all running apps 
 cd c:\windows\System32
